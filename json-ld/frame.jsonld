@@ -1,0 +1,16 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@type": {
+    "@default": "Dataset"
+  },
+  "@requireAll": true,
+  "@embed": "@always",
+  "variableMeasured": {
+    "@type": {
+      "@default": "PropertyValue"
+    },
+    "@embed": "@always"
+  }
+}
