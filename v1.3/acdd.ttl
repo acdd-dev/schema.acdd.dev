@@ -1,0 +1,471 @@
+@prefix : <https://schema.acdd.dev/v1.3#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix acdd: <https://schema.acdd.dev/v1.3#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@base <https://schema.acdd.dev/v1.3#> .
+
+<https://schema.acdd.dev/v1.3#> rdf:type owl:Ontology ;
+                                 owl:versionIRI <https://schema.acdd.dev/v1.3#> ;
+                                 dct:creator "Earth Science Information Partners (ESIP)" ;
+                                 dct:description "An OWL ontology encoding the ESIP Attribute Convention for Data Discovery (ACDD). It formalises the concepts, recommendation levels, and metadata properties defined at https://wiki.esipfed.org/Data_Discovery_(ACDD)."@en ;
+                                 dct:license <http://www.gnu.org/copyleft/fdl.html> ;
+                                 dct:modified "2016-11-15"^^xsd:date ;
+                                 dct:source <https://wiki.esipfed.org/Data_Discovery_(ACDD)> ;
+                                 dct:title "Attribute Convention for Data Discovery (ACDD) Ontology"@en ;
+                                 vann:preferredNamespacePrefix "acdd" ;
+                                 vann:preferredNamespaceUri "http://wiki.esipfed.org/ontology/acdd#" ;
+                                 owl:versionInfo "1.3" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/creator
+dct:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dct:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dct:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dct:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dct:source rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.acdd.dev/v1.3#recommendationLevel
+acdd:recommendationLevel rdf:type owl:AnnotationProperty ;
+                         rdfs:comment "Links an ACDD property to its recommendation level."@en ;
+                         rdfs:label "recommendation level"@en ;
+                         rdfs:range acdd:RecommendationLevel .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#duration
+xsd:duration rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://schema.acdd.dev/v1.3#abstract
+acdd:abstract rdf:type owl:DatatypeProperty ;
+              rdfs:domain owl:Thing ;
+              rdfs:range xsd:string ;
+              rdfs:comment "A paragraph describing the resource. Also referred to as 'Description' in Catalog Services for the Web."@en ;
+              rdfs:label "Abstract"@en ;
+              rdfs:seeAlso <https://wiki.esipfed.org/Concepts_Glossary#Abstract> ;
+              acdd:recommendationLevel acdd:HighlyRecommended .
+
+
+###  https://schema.acdd.dev/v1.3#acknowledgement
+acdd:acknowledgement rdf:type owl:DatatypeProperty ;
+                     rdfs:domain owl:Thing ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Provides a place to acknowledge various types of support for the project that produced the data."@en ;
+                     rdfs:label "Acknowledgement"@en ;
+                     rdfs:seeAlso <https://wiki.esipfed.org/Concepts_Glossary#Acknowledgement> ;
+                     acdd:recommendationLevel acdd:Recommended .
+
+
+###  https://schema.acdd.dev/v1.3#author_originator_email_address
+acdd:author_originator_email_address rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain owl:Thing ;
+                                     rdfs:range xsd:string ;
+                                     rdfs:comment "The electronic mail address of the principal author of the resource."@en ;
+                                     rdfs:label "Author / Originator Email Address"@en ;
+                                     rdfs:seeAlso <https://wiki.esipfed.org/Concepts_Glossary#Author_/_Originator_Email_Address> ;
+                                     acdd:recommendationLevel acdd:Recommended .
+
+
+###  https://schema.acdd.dev/v1.3#author_originator_www_address
+acdd:author_originator_www_address rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain owl:Thing ;
+                                   rdfs:range xsd:anyURI ;
+                                   rdfs:comment "The World Wide Web address of the principal author of the cited resource."@en ;
+                                   rdfs:label "Author / Originator World Wide Web Address"@en ;
+                                   rdfs:seeAlso <https://wiki.esipfed.org/Concepts_Glossary#Author_/_Originator_World_Wide_Web_Address> ;
+                                   acdd:recommendationLevel acdd:Recommended .
+
+
+###  https://schema.acdd.dev/v1.3#bounding_box
+acdd:bounding_box rdf:type owl:DatatypeProperty ;
+                  rdfs:domain owl:Thing ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "A bounding box for identifying a geographic area of interest. Note: This concept is called \"Coverage\" in the CSW Specification."@en ;
+                  rdfs:label "Bounding Box"@en ;
+                  rdfs:seeAlso <https://wiki.esipfed.org/Concepts_Glossary#Bounding_Box> ;
+                  acdd:recommendationLevel acdd:Recommended .
+
+
+###  https://schema.acdd.dev/v1.3#common_data_model_datatype
+acdd:common_data_model_datatype rdf:type owl:DatatypeProperty ;
+                                rdfs:domain owl:Thing ;
+                                rdfs:range xsd:string ;
+                                rdfs:comment "The THREDDS data type for this resource. Current values: vector, grid, textTable, tin, stereoModel, video."@en ;
+                                rdfs:label "Common Data Model Datatype"@en ;
+                                rdfs:seeAlso <https://wiki.esipfed.org/Concepts_Glossary#Common_Data_Model_Datatype> ;
+                                acdd:recommendationLevel acdd:Recommended .
+
+
+###  https://schema.acdd.dev/v1.3#contributor_name
+acdd:contributor_name rdf:type owl:DatatypeProperty ;
+                      rdfs:domain owl:Thing ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "The name of a contributor to the resource."@en ;
+                      rdfs:label "Contributor Name"@en ;
+                      rdfs:seeAlso <https://wiki.esipfed.org/Concepts_Glossary#Contributor_Name> ;
+                      acdd:recommendationLevel acdd:Suggested .
+
+
+###  https://schema.acdd.dev/v1.3#contributor_role
+acdd:contributor_role rdf:type owl:DatatypeProperty ;
+                      rdfs:domain owl:Thing ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "The role of any individuals or institutions that contributed to the creation of the data."@en ;
+                      rdfs:label "Contributor Role"@en ;
+                      rdfs:seeAlso <https://wiki.esipfed.org/Concepts_Glossary#Contributor_Role> ;
+                      acdd:recommendationLevel acdd:Suggested .
+
+
+###  https://schema.acdd.dev/v1.3#easternmost_longitude
+acdd:easternmost_longitude rdf:type owl:DatatypeProperty ;
+                           rdfs:domain owl:Thing ;
+                           rdfs:range xsd:double ;
+                           rdfs:comment "The easternmost longitude of the bounding rectangle."@en ;
+                           rdfs:label "Easternmost Longitude"@en ;
+                           rdfs:seeAlso <https://wiki.esipfed.org/Concepts_Glossary#Easternmost_Longitude> ;
+                           acdd:recommendationLevel acdd:Recommended .
+
+
+###  https://schema.acdd.dev/v1.3#end_time
+acdd:end_time rdf:type owl:DatatypeProperty ;
+              rdfs:domain owl:Thing ;
+              rdfs:range xsd:string ;
+              rdfs:comment "The end of the bounding time period."@en ;
+              rdfs:label "End Time"@en ;
+              rdfs:seeAlso <https://wiki.esipfed.org/Concepts_Glossary#End_Time> ;
+              acdd:recommendationLevel acdd:Recommended .
+
+
+###  https://schema.acdd.dev/v1.3#keyword
+acdd:keyword rdf:type owl:DatatypeProperty ;
+             rdfs:domain owl:Thing ;
+             rdfs:range xsd:string ;
+             rdfs:comment "A word or phrase that describes some aspect of a resource. Can be one of several types."@en ;
+             rdfs:label "Keyword"@en ;
+             rdfs:seeAlso <https://wiki.esipfed.org/Concepts_Glossary#Keyword> ;
+             acdd:recommendationLevel acdd:HighlyRecommended .
+
+
+###  https://schema.acdd.dev/v1.3#keyword_vocabulary
+acdd:keyword_vocabulary rdf:type owl:DatatypeProperty ;
+                        rdfs:domain owl:Thing ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "If you are following a guideline or using a shared vocabulary for the words/phrases in your keywords attribute, put the name of that guideline here."@en ;
+                        rdfs:label "Keyword Vocabulary"@en ;
+                        rdfs:seeAlso <https://wiki.esipfed.org/Concepts_Glossary#Keyword_Vocabulary> ;
+                        acdd:recommendationLevel acdd:Recommended .
+
+
+###  https://schema.acdd.dev/v1.3#lineage_statement
+acdd:lineage_statement rdf:type owl:DatatypeProperty ;
+                       rdfs:domain owl:Thing ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "Information and references for sources and processes that were used to create the dataset and an audit trail for modifications to the original data."@en ;
+                       rdfs:label "Lineage Statement"@en ;
+                       rdfs:seeAlso <https://wiki.esipfed.org/Concepts_Glossary#Lineage_Statement> ;
+                       acdd:recommendationLevel acdd:Recommended .
+
+
+###  https://schema.acdd.dev/v1.3#naming_authority
+acdd:naming_authority rdf:type owl:DatatypeProperty ;
+                      rdfs:domain owl:Thing ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "The organization responsible for the maintenance of the identifier (namespace)."@en ;
+                      rdfs:label "Naming Authority"@en ;
+                      rdfs:seeAlso <https://wiki.esipfed.org/Concepts_Glossary#Naming_Authority> ;
+                      acdd:recommendationLevel acdd:Recommended .
+
+
+###  https://schema.acdd.dev/v1.3#northernmost_latitude
+acdd:northernmost_latitude rdf:type owl:DatatypeProperty ;
+                           rdfs:domain owl:Thing ;
+                           rdfs:range xsd:double ;
+                           rdfs:comment "The northernmost latitude of the bounding rectangle."@en ;
+                           rdfs:label "Northernmost Latitude"@en ;
+                           rdfs:seeAlso <https://wiki.esipfed.org/Concepts_Glossary#Northernmost_Latitude> ;
+                           acdd:recommendationLevel acdd:Recommended .
+
+
+###  https://schema.acdd.dev/v1.3#originating_organization
+acdd:originating_organization rdf:type owl:DatatypeProperty ;
+                              rdfs:domain owl:Thing ;
+                              rdfs:range xsd:string ;
+                              rdfs:comment "The organization responsible for creating the resource."@en ;
+                              rdfs:label "Originating Organization"@en ;
+                              rdfs:seeAlso <https://wiki.esipfed.org/Concepts_Glossary#Originating_Organization> ;
+                              acdd:recommendationLevel acdd:Recommended .
+
+
+###  https://schema.acdd.dev/v1.3#processing_level
+acdd:processing_level rdf:type owl:DatatypeProperty ;
+                      rdfs:domain owl:Thing ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "A code that indicates the extent of processing done in the creation of a dataset."@en ;
+                      rdfs:label "Processing Level"@en ;
+                      rdfs:seeAlso <https://wiki.esipfed.org/Concepts_Glossary#Processing_Level> ;
+                      acdd:recommendationLevel acdd:Recommended .
+
+
+###  https://schema.acdd.dev/v1.3#project_name
+acdd:project_name rdf:type owl:DatatypeProperty ;
+                  rdfs:domain owl:Thing ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "The name of the project that the resource was associated with."@en ;
+                  rdfs:label "Project Name"@en ;
+                  rdfs:seeAlso <https://wiki.esipfed.org/Concepts_Glossary#Project_Name> ;
+                  acdd:recommendationLevel acdd:Recommended .
+
+
+###  https://schema.acdd.dev/v1.3#publisher
+acdd:publisher rdf:type owl:DatatypeProperty ;
+               rdfs:domain owl:Thing ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Publisher of the cited resource."@en ;
+               rdfs:label "Publisher"@en ;
+               rdfs:seeAlso <https://wiki.esipfed.org/Concepts_Glossary#Publisher> ;
+               acdd:recommendationLevel acdd:Suggested .
+
+
+###  https://schema.acdd.dev/v1.3#publisher_email
+acdd:publisher_email rdf:type owl:DatatypeProperty ;
+                     rdfs:domain owl:Thing ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Email associated with the publisher of the cited resource."@en ;
+                     rdfs:label "Publisher E-Mail"@en ;
+                     rdfs:seeAlso <https://wiki.esipfed.org/Concepts_Glossary#Publisher_E-Mail> ;
+                     acdd:recommendationLevel acdd:Suggested .
+
+
+###  https://schema.acdd.dev/v1.3#publisher_url
+acdd:publisher_url rdf:type owl:DatatypeProperty ;
+                   rdfs:domain owl:Thing ;
+                   rdfs:range xsd:anyURI ;
+                   rdfs:comment "World Wide Web address associated with the publisher of the cited resource."@en ;
+                   rdfs:label "Publisher URL"@en ;
+                   rdfs:seeAlso <https://wiki.esipfed.org/Concepts_Glossary#Publisher_URL> ;
+                   acdd:recommendationLevel acdd:Suggested .
+
+
+###  https://schema.acdd.dev/v1.3#resource_access_constraints
+acdd:resource_access_constraints rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain owl:Thing ;
+                                 rdfs:range xsd:string ;
+                                 rdfs:comment "Information about any constraints for accessing the data set. This includes any special restrictions, legal prerequisites, limitations and/or warnings on obtaining the data set."@en ;
+                                 rdfs:label "Resource Access Constraints"@en ;
+                                 rdfs:seeAlso <https://wiki.esipfed.org/Concepts_Glossary#Resource_Access_Constraints> ;
+                                 acdd:recommendationLevel acdd:Recommended .
+
+
+###  https://schema.acdd.dev/v1.3#resource_contact
+acdd:resource_contact rdf:type owl:DatatypeProperty ;
+                      rdfs:domain owl:Thing ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "The organization or person responsible for answering questions about the resource."@en ;
+                      rdfs:label "Resource Contact"@en ;
+                      rdfs:seeAlso <https://wiki.esipfed.org/Concepts_Glossary#Resource_Contact> ;
+                      acdd:recommendationLevel acdd:Recommended .
+
+
+###  https://schema.acdd.dev/v1.3#resource_creation-revision_date
+acdd:resource_creation-revision_date rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain owl:Thing ;
+                                     rdfs:range xsd:string ;
+                                     rdfs:comment "The date the resource was created."@en ;
+                                     rdfs:label "Resource Creation/Revision Date"@en ;
+                                     rdfs:seeAlso <https://wiki.esipfed.org/Concepts_Glossary#Resource_Creation/Revision_Date> ;
+                                     acdd:recommendationLevel acdd:Recommended .
+
+
+###  https://schema.acdd.dev/v1.3#resource_identifier
+acdd:resource_identifier rdf:type owl:DatatypeProperty ;
+                         rdfs:domain owl:Thing ;
+                         rdfs:range xsd:string ;
+                         rdfs:comment "Identifier for the resource described by the metadata."@en ;
+                         rdfs:label "Resource Identifier"@en ;
+                         rdfs:seeAlso <https://wiki.esipfed.org/Concepts_Glossary#Resource_Identifier> ;
+                         acdd:recommendationLevel acdd:Recommended .
+
+
+###  https://schema.acdd.dev/v1.3#resource_title
+acdd:resource_title rdf:type owl:DatatypeProperty ;
+                    rdfs:domain owl:Thing ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "A short description of the resource. The title should be descriptive enough so that when a user is presented with a list of titles the general content of the data set can be determined."@en ;
+                    rdfs:label "Resource Title"@en ;
+                    rdfs:seeAlso <https://wiki.esipfed.org/Concepts_Glossary#Resource_Title> ;
+                    acdd:recommendationLevel acdd:HighlyRecommended .
+
+
+###  https://schema.acdd.dev/v1.3#southernmost_latitude
+acdd:southernmost_latitude rdf:type owl:DatatypeProperty ;
+                           rdfs:domain owl:Thing ;
+                           rdfs:range xsd:double ;
+                           rdfs:comment "The southernmost latitude of the bounding rectangle."@en ;
+                           rdfs:label "Southernmost Latitude"@en ;
+                           rdfs:seeAlso <https://wiki.esipfed.org/Concepts_Glossary#Southernmost_Latitude> ;
+                           acdd:recommendationLevel acdd:Recommended .
+
+
+###  https://schema.acdd.dev/v1.3#standard_name_vocabulary
+acdd:standard_name_vocabulary rdf:type owl:DatatypeProperty ;
+                              rdfs:domain owl:Thing ;
+                              rdfs:range xsd:string ;
+                              rdfs:comment "The name of the shared vocabulary from which variable standard names are taken."@en ;
+                              rdfs:label "Standard Name Vocabulary"@en ;
+                              rdfs:seeAlso <https://wiki.esipfed.org/Concepts_Glossary#Standard_Name_Vocabulary> ;
+                              acdd:recommendationLevel acdd:Recommended .
+
+
+###  https://schema.acdd.dev/v1.3#start_time
+acdd:start_time rdf:type owl:DatatypeProperty ;
+                rdfs:domain owl:Thing ;
+                rdfs:range xsd:string ;
+                rdfs:comment "The start of the bounding time period."@en ;
+                rdfs:label "Start Time"@en ;
+                rdfs:seeAlso <https://wiki.esipfed.org/Concepts_Glossary#Start_Time> ;
+                acdd:recommendationLevel acdd:Recommended .
+
+
+###  https://schema.acdd.dev/v1.3#supplemental_information
+acdd:supplemental_information rdf:type owl:DatatypeProperty ;
+                              rdfs:domain owl:Thing ;
+                              rdfs:range xsd:string ;
+                              rdfs:comment "Miscellaneous information about the data."@en ;
+                              rdfs:label "Supplemental Information"@en ;
+                              rdfs:seeAlso <https://wiki.esipfed.org/Concepts_Glossary#Supplemental_Information> ;
+                              acdd:recommendationLevel acdd:Recommended .
+
+
+###  https://schema.acdd.dev/v1.3#temporal_extent
+acdd:temporal_extent rdf:type owl:DatatypeProperty ;
+                     rdfs:domain owl:Thing ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "The temporal extent of the resource."@en ;
+                     rdfs:label "Temporal Extent"@en ;
+                     rdfs:seeAlso <https://wiki.esipfed.org/Concepts_Glossary#Temporal_Extent> ;
+                     acdd:recommendationLevel acdd:Recommended .
+
+
+###  https://schema.acdd.dev/v1.3#temporal_resolution
+acdd:temporal_resolution rdf:type owl:DatatypeProperty ;
+                         rdfs:domain owl:Thing ;
+                         rdfs:range xsd:string ;
+                         rdfs:comment "The smallest time step included in the resource."@en ;
+                         rdfs:label "Temporal Resolution"@en ;
+                         rdfs:seeAlso <https://wiki.esipfed.org/Concepts_Glossary#Temporal_Resolution> ;
+                         acdd:recommendationLevel acdd:Recommended .
+
+
+###  https://schema.acdd.dev/v1.3#vertical_maximum
+acdd:vertical_maximum rdf:type owl:DatatypeProperty ;
+                      rdfs:domain owl:Thing ;
+                      rdfs:range xsd:double ;
+                      rdfs:comment "The maximum height or depth of the bounding rectangle."@en ;
+                      rdfs:label "Vertical Maximum"@en ;
+                      rdfs:seeAlso <https://wiki.esipfed.org/Concepts_Glossary#Vertical_Maximum> ;
+                      acdd:recommendationLevel acdd:Recommended .
+
+
+###  https://schema.acdd.dev/v1.3#vertical_minimum
+acdd:vertical_minimum rdf:type owl:DatatypeProperty ;
+                      rdfs:domain owl:Thing ;
+                      rdfs:range xsd:double ;
+                      rdfs:comment "The minimum height or depth of the bounding rectangle."@en ;
+                      rdfs:label "Vertical Minimum"@en ;
+                      rdfs:seeAlso <https://wiki.esipfed.org/Concepts_Glossary#Vertical_Minimum> ;
+                      acdd:recommendationLevel acdd:Recommended .
+
+
+###  https://schema.acdd.dev/v1.3#westernmost_longitude
+acdd:westernmost_longitude rdf:type owl:DatatypeProperty ;
+                           rdfs:domain owl:Thing ;
+                           rdfs:range xsd:double ;
+                           rdfs:comment "The westernmost longitude of the bounding rectangle."@en ;
+                           rdfs:label "Westernmost Longitude"@en ;
+                           rdfs:seeAlso <https://wiki.esipfed.org/Concepts_Glossary#Westernmost_Longitude> ;
+                           acdd:recommendationLevel acdd:Recommended .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://schema.acdd.dev/v1.3#RecommendationLevel
+acdd:RecommendationLevel rdf:type owl:Class ;
+                         rdfs:comment "The level of recommendation for an ACDD attribute: Highly Recommended, Recommended, or Suggested."@en ;
+                         rdfs:label "Recommendation Level"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://schema.acdd.dev/v1.3#HighlyRecommended
+acdd:HighlyRecommended rdf:type owl:NamedIndividual ,
+                                acdd:RecommendationLevel ;
+                       rdfs:comment "Attributes that are highly recommended by the ACDD."@en ;
+                       rdfs:label "Highly Recommended"@en .
+
+
+###  https://schema.acdd.dev/v1.3#Recommended
+acdd:Recommended rdf:type owl:NamedIndividual ,
+                          acdd:RecommendationLevel ;
+                 rdfs:comment "Attributes that are recommended by the ACDD."@en ;
+                 rdfs:label "Recommended"@en .
+
+
+###  https://schema.acdd.dev/v1.3#Suggested
+acdd:Suggested rdf:type owl:NamedIndividual ,
+                        acdd:RecommendationLevel ;
+               rdfs:comment "Attributes that are suggested by the ACDD."@en ;
+               rdfs:label "Suggested"@en .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,939 @@
+[ {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/source",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#date",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#duration",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Earth Science Information Partners (ESIP)"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "An OWL ontology encoding the ESIP Attribute Convention for Data Discovery (ACDD). It formalises the concepts, recommendation levels, and metadata properties defined at https://wiki.esipfed.org/Data_Discovery_(ACDD)."
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "http://www.gnu.org/copyleft/fdl.html"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2016-11-15"
+  } ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@id" : "https://wiki.esipfed.org/Data_Discovery_(ACDD)"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "Attribute Convention for Data Discovery (ACDD) Ontology"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "acdd"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "http://wiki.esipfed.org/ontology/acdd#"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "1.3"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#HighlyRecommended",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#RecommendationLevel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Attributes that are highly recommended by the ACDD."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Highly Recommended"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#RecommendationLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The level of recommendation for an ACDD attribute: Highly Recommended, Recommended, or Suggested."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Recommendation Level"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#Recommended",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#RecommendationLevel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Attributes that are recommended by the ACDD."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Recommended"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#Suggested",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#RecommendationLevel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Attributes that are suggested by the ACDD."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Suggested"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#abstract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A paragraph describing the resource. Also referred to as 'Description' in Catalog Services for the Web."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Abstract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Abstract"
+  } ],
+  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#HighlyRecommended"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#acknowledgement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Provides a place to acknowledge various types of support for the project that produced the data."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Acknowledgement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Acknowledgement"
+  } ],
+  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#author_originator_email_address",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The electronic mail address of the principal author of the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Author / Originator Email Address"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Author_/_Originator_Email_Address"
+  } ],
+  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#author_originator_www_address",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The World Wide Web address of the principal author of the cited resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Author / Originator World Wide Web Address"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Author_/_Originator_World_Wide_Web_Address"
+  } ],
+  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#bounding_box",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A bounding box for identifying a geographic area of interest. Note: This concept is called \"Coverage\" in the CSW Specification."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Bounding Box"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Bounding_Box"
+  } ],
+  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#common_data_model_datatype",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The THREDDS data type for this resource. Current values: vector, grid, textTable, tin, stereoModel, video."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Common Data Model Datatype"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Common_Data_Model_Datatype"
+  } ],
+  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#contributor_name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The name of a contributor to the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Contributor Name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Contributor_Name"
+  } ],
+  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#Suggested"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#contributor_role",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The role of any individuals or institutions that contributed to the creation of the data."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Contributor Role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Contributor_Role"
+  } ],
+  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#Suggested"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#easternmost_longitude",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The easternmost longitude of the bounding rectangle."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Easternmost Longitude"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Easternmost_Longitude"
+  } ],
+  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#end_time",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The end of the bounding time period."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "End Time"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://wiki.esipfed.org/Concepts_Glossary#End_Time"
+  } ],
+  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#keyword",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A word or phrase that describes some aspect of a resource. Can be one of several types."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Keyword"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Keyword"
+  } ],
+  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#HighlyRecommended"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#keyword_vocabulary",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "If you are following a guideline or using a shared vocabulary for the words/phrases in your keywords attribute, put the name of that guideline here."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Keyword Vocabulary"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Keyword_Vocabulary"
+  } ],
+  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#lineage_statement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Information and references for sources and processes that were used to create the dataset and an audit trail for modifications to the original data."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Lineage Statement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Lineage_Statement"
+  } ],
+  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#naming_authority",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The organization responsible for the maintenance of the identifier (namespace)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Naming Authority"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Naming_Authority"
+  } ],
+  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#northernmost_latitude",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The northernmost latitude of the bounding rectangle."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Northernmost Latitude"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Northernmost_Latitude"
+  } ],
+  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#originating_organization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The organization responsible for creating the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Originating Organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Originating_Organization"
+  } ],
+  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#processing_level",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A code that indicates the extent of processing done in the creation of a dataset."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Processing Level"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Processing_Level"
+  } ],
+  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#project_name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The name of the project that the resource was associated with."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Project Name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Project_Name"
+  } ],
+  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#publisher",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Publisher of the cited resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Publisher"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Publisher"
+  } ],
+  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#Suggested"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#publisher_email",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Email associated with the publisher of the cited resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Publisher E-Mail"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Publisher_E-Mail"
+  } ],
+  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#Suggested"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#publisher_url",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "World Wide Web address associated with the publisher of the cited resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Publisher URL"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Publisher_URL"
+  } ],
+  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#Suggested"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#recommendationLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links an ACDD property to its recommendation level."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "recommendation level"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#RecommendationLevel"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#resource_access_constraints",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Information about any constraints for accessing the data set. This includes any special restrictions, legal prerequisites, limitations and/or warnings on obtaining the data set."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Resource Access Constraints"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Resource_Access_Constraints"
+  } ],
+  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#resource_contact",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The organization or person responsible for answering questions about the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Resource Contact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Resource_Contact"
+  } ],
+  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#resource_creation-revision_date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The date the resource was created."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Resource Creation/Revision Date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Resource_Creation/Revision_Date"
+  } ],
+  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#resource_identifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Identifier for the resource described by the metadata."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Resource Identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Resource_Identifier"
+  } ],
+  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#resource_title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A short description of the resource. The title should be descriptive enough so that when a user is presented with a list of titles the general content of the data set can be determined."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Resource Title"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Resource_Title"
+  } ],
+  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#HighlyRecommended"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#southernmost_latitude",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The southernmost latitude of the bounding rectangle."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Southernmost Latitude"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Southernmost_Latitude"
+  } ],
+  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#standard_name_vocabulary",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The name of the shared vocabulary from which variable standard names are taken."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Standard Name Vocabulary"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Standard_Name_Vocabulary"
+  } ],
+  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#start_time",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The start of the bounding time period."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Start Time"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Start_Time"
+  } ],
+  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#supplemental_information",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Miscellaneous information about the data."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Supplemental Information"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Supplemental_Information"
+  } ],
+  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#temporal_extent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The temporal extent of the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Temporal Extent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Temporal_Extent"
+  } ],
+  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#temporal_resolution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The smallest time step included in the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Temporal Resolution"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Temporal_Resolution"
+  } ],
+  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#vertical_maximum",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The maximum height or depth of the bounding rectangle."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Vertical Maximum"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Vertical_Maximum"
+  } ],
+  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#vertical_minimum",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The minimum height or depth of the bounding rectangle."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Vertical Minimum"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Vertical_Minimum"
+  } ],
+  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  } ]
+}, {
+  "@id" : "https://schema.acdd.dev/v1.3#westernmost_longitude",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The westernmost longitude of the bounding rectangle."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Westernmost Longitude"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Westernmost_Longitude"
+  } ],
+  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  } ]
+} ]
