@@ -1,19 +1,19 @@
-@prefix : <https://schema.acdd.dev/v1.3#> .
+@prefix : <https://schema.acdd.dev/v1.3/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix acdd: <https://schema.acdd.dev/v1.3#> .
+@prefix acdd: <https://schema.acdd.dev/v1.3/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
-@base <https://schema.acdd.dev/v1.3#> .
+@base <https://schema.acdd.dev/v1.3/> .
 
-<https://schema.acdd.dev/v1.3#> rdf:type owl:Ontology ;
-                                 owl:versionIRI <https://schema.acdd.dev/v1.3#> ;
+<https://schema.acdd.dev/v1.3/> rdf:type owl:Ontology ;
+                                 owl:versionIRI <https://schema.acdd.dev/v1.3/> ;
                                  dct:creator "Earth Science Information Partners (ESIP)" ;
                                  dct:description "An OWL ontology encoding the ESIP Attribute Convention for Data Discovery (ACDD). It formalises the concepts, recommendation levels, and metadata properties defined at https://wiki.esipfed.org/Data_Discovery_(ACDD)."@en ;
                                  dct:license <http://www.gnu.org/copyleft/fdl.html> ;
@@ -21,7 +21,7 @@
                                  dct:source <https://wiki.esipfed.org/Data_Discovery_(ACDD)> ;
                                  dct:title "Attribute Convention for Data Discovery (ACDD) Ontology"@en ;
                                  vann:preferredNamespacePrefix "acdd" ;
-                                 vann:preferredNamespaceUri "http://wiki.esipfed.org/ontology/acdd#" ;
+                                 vann:preferredNamespaceUri "https://schema.acdd.dev/v1.3/" ;
                                  owl:versionInfo "1.3" .
 
 #################################################################
@@ -60,7 +60,7 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 
 
-###  https://schema.acdd.dev/v1.3#recommendationLevel
+###  https://schema.acdd.dev/v1.3/recommendationLevel
 acdd:recommendationLevel rdf:type owl:AnnotationProperty ;
                          rdfs:comment "Links an ACDD property to its recommendation level."@en ;
                          rdfs:label "recommendation level"@en ;
@@ -83,7 +83,7 @@ xsd:duration rdf:type rdfs:Datatype .
 #    Data properties
 #################################################################
 
-###  https://schema.acdd.dev/v1.3#abstract
+###  https://schema.acdd.dev/v1.3/abstract
 acdd:abstract rdf:type owl:DatatypeProperty ;
               rdfs:domain owl:Thing ;
               rdfs:range xsd:string ;
@@ -93,7 +93,7 @@ acdd:abstract rdf:type owl:DatatypeProperty ;
               acdd:recommendationLevel acdd:HighlyRecommended .
 
 
-###  https://schema.acdd.dev/v1.3#acknowledgement
+###  https://schema.acdd.dev/v1.3/acknowledgement
 acdd:acknowledgement rdf:type owl:DatatypeProperty ;
                      rdfs:domain owl:Thing ;
                      rdfs:range xsd:string ;
@@ -103,7 +103,7 @@ acdd:acknowledgement rdf:type owl:DatatypeProperty ;
                      acdd:recommendationLevel acdd:Recommended .
 
 
-###  https://schema.acdd.dev/v1.3#author_originator_email_address
+###  https://schema.acdd.dev/v1.3/author_originator_email_address
 acdd:author_originator_email_address rdf:type owl:DatatypeProperty ;
                                      rdfs:domain owl:Thing ;
                                      rdfs:range xsd:string ;
@@ -113,7 +113,7 @@ acdd:author_originator_email_address rdf:type owl:DatatypeProperty ;
                                      acdd:recommendationLevel acdd:Recommended .
 
 
-###  https://schema.acdd.dev/v1.3#author_originator_www_address
+###  https://schema.acdd.dev/v1.3/author_originator_www_address
 acdd:author_originator_www_address rdf:type owl:DatatypeProperty ;
                                    rdfs:domain owl:Thing ;
                                    rdfs:range xsd:anyURI ;
@@ -123,7 +123,7 @@ acdd:author_originator_www_address rdf:type owl:DatatypeProperty ;
                                    acdd:recommendationLevel acdd:Recommended .
 
 
-###  https://schema.acdd.dev/v1.3#bounding_box
+###  https://schema.acdd.dev/v1.3/bounding_box
 acdd:bounding_box rdf:type owl:DatatypeProperty ;
                   rdfs:domain owl:Thing ;
                   rdfs:range xsd:string ;
@@ -133,7 +133,7 @@ acdd:bounding_box rdf:type owl:DatatypeProperty ;
                   acdd:recommendationLevel acdd:Recommended .
 
 
-###  https://schema.acdd.dev/v1.3#common_data_model_datatype
+###  https://schema.acdd.dev/v1.3/common_data_model_datatype
 acdd:common_data_model_datatype rdf:type owl:DatatypeProperty ;
                                 rdfs:domain owl:Thing ;
                                 rdfs:range xsd:string ;
@@ -143,7 +143,7 @@ acdd:common_data_model_datatype rdf:type owl:DatatypeProperty ;
                                 acdd:recommendationLevel acdd:Recommended .
 
 
-###  https://schema.acdd.dev/v1.3#contributor_name
+###  https://schema.acdd.dev/v1.3/contributor_name
 acdd:contributor_name rdf:type owl:DatatypeProperty ;
                       rdfs:domain owl:Thing ;
                       rdfs:range xsd:string ;
@@ -153,7 +153,7 @@ acdd:contributor_name rdf:type owl:DatatypeProperty ;
                       acdd:recommendationLevel acdd:Suggested .
 
 
-###  https://schema.acdd.dev/v1.3#contributor_role
+###  https://schema.acdd.dev/v1.3/contributor_role
 acdd:contributor_role rdf:type owl:DatatypeProperty ;
                       rdfs:domain owl:Thing ;
                       rdfs:range xsd:string ;
@@ -163,7 +163,7 @@ acdd:contributor_role rdf:type owl:DatatypeProperty ;
                       acdd:recommendationLevel acdd:Suggested .
 
 
-###  https://schema.acdd.dev/v1.3#easternmost_longitude
+###  https://schema.acdd.dev/v1.3/easternmost_longitude
 acdd:easternmost_longitude rdf:type owl:DatatypeProperty ;
                            rdfs:domain owl:Thing ;
                            rdfs:range xsd:double ;
@@ -173,7 +173,7 @@ acdd:easternmost_longitude rdf:type owl:DatatypeProperty ;
                            acdd:recommendationLevel acdd:Recommended .
 
 
-###  https://schema.acdd.dev/v1.3#end_time
+###  https://schema.acdd.dev/v1.3/end_time
 acdd:end_time rdf:type owl:DatatypeProperty ;
               rdfs:domain owl:Thing ;
               rdfs:range xsd:string ;
@@ -183,7 +183,7 @@ acdd:end_time rdf:type owl:DatatypeProperty ;
               acdd:recommendationLevel acdd:Recommended .
 
 
-###  https://schema.acdd.dev/v1.3#keyword
+###  https://schema.acdd.dev/v1.3/keyword
 acdd:keyword rdf:type owl:DatatypeProperty ;
              rdfs:domain owl:Thing ;
              rdfs:range xsd:string ;
@@ -193,7 +193,7 @@ acdd:keyword rdf:type owl:DatatypeProperty ;
              acdd:recommendationLevel acdd:HighlyRecommended .
 
 
-###  https://schema.acdd.dev/v1.3#keyword_vocabulary
+###  https://schema.acdd.dev/v1.3/keyword_vocabulary
 acdd:keyword_vocabulary rdf:type owl:DatatypeProperty ;
                         rdfs:domain owl:Thing ;
                         rdfs:range xsd:string ;
@@ -203,7 +203,7 @@ acdd:keyword_vocabulary rdf:type owl:DatatypeProperty ;
                         acdd:recommendationLevel acdd:Recommended .
 
 
-###  https://schema.acdd.dev/v1.3#lineage_statement
+###  https://schema.acdd.dev/v1.3/lineage_statement
 acdd:lineage_statement rdf:type owl:DatatypeProperty ;
                        rdfs:domain owl:Thing ;
                        rdfs:range xsd:string ;
@@ -213,7 +213,7 @@ acdd:lineage_statement rdf:type owl:DatatypeProperty ;
                        acdd:recommendationLevel acdd:Recommended .
 
 
-###  https://schema.acdd.dev/v1.3#naming_authority
+###  https://schema.acdd.dev/v1.3/naming_authority
 acdd:naming_authority rdf:type owl:DatatypeProperty ;
                       rdfs:domain owl:Thing ;
                       rdfs:range xsd:string ;
@@ -223,7 +223,7 @@ acdd:naming_authority rdf:type owl:DatatypeProperty ;
                       acdd:recommendationLevel acdd:Recommended .
 
 
-###  https://schema.acdd.dev/v1.3#northernmost_latitude
+###  https://schema.acdd.dev/v1.3/northernmost_latitude
 acdd:northernmost_latitude rdf:type owl:DatatypeProperty ;
                            rdfs:domain owl:Thing ;
                            rdfs:range xsd:double ;
@@ -233,7 +233,7 @@ acdd:northernmost_latitude rdf:type owl:DatatypeProperty ;
                            acdd:recommendationLevel acdd:Recommended .
 
 
-###  https://schema.acdd.dev/v1.3#originating_organization
+###  https://schema.acdd.dev/v1.3/originating_organization
 acdd:originating_organization rdf:type owl:DatatypeProperty ;
                               rdfs:domain owl:Thing ;
                               rdfs:range xsd:string ;
@@ -243,7 +243,7 @@ acdd:originating_organization rdf:type owl:DatatypeProperty ;
                               acdd:recommendationLevel acdd:Recommended .
 
 
-###  https://schema.acdd.dev/v1.3#processing_level
+###  https://schema.acdd.dev/v1.3/processing_level
 acdd:processing_level rdf:type owl:DatatypeProperty ;
                       rdfs:domain owl:Thing ;
                       rdfs:range xsd:string ;
@@ -253,7 +253,7 @@ acdd:processing_level rdf:type owl:DatatypeProperty ;
                       acdd:recommendationLevel acdd:Recommended .
 
 
-###  https://schema.acdd.dev/v1.3#project_name
+###  https://schema.acdd.dev/v1.3/project_name
 acdd:project_name rdf:type owl:DatatypeProperty ;
                   rdfs:domain owl:Thing ;
                   rdfs:range xsd:string ;
@@ -263,7 +263,7 @@ acdd:project_name rdf:type owl:DatatypeProperty ;
                   acdd:recommendationLevel acdd:Recommended .
 
 
-###  https://schema.acdd.dev/v1.3#publisher
+###  https://schema.acdd.dev/v1.3/publisher
 acdd:publisher rdf:type owl:DatatypeProperty ;
                rdfs:domain owl:Thing ;
                rdfs:range xsd:string ;
@@ -273,7 +273,7 @@ acdd:publisher rdf:type owl:DatatypeProperty ;
                acdd:recommendationLevel acdd:Suggested .
 
 
-###  https://schema.acdd.dev/v1.3#publisher_email
+###  https://schema.acdd.dev/v1.3/publisher_email
 acdd:publisher_email rdf:type owl:DatatypeProperty ;
                      rdfs:domain owl:Thing ;
                      rdfs:range xsd:string ;
@@ -283,7 +283,7 @@ acdd:publisher_email rdf:type owl:DatatypeProperty ;
                      acdd:recommendationLevel acdd:Suggested .
 
 
-###  https://schema.acdd.dev/v1.3#publisher_url
+###  https://schema.acdd.dev/v1.3/publisher_url
 acdd:publisher_url rdf:type owl:DatatypeProperty ;
                    rdfs:domain owl:Thing ;
                    rdfs:range xsd:anyURI ;
@@ -293,7 +293,7 @@ acdd:publisher_url rdf:type owl:DatatypeProperty ;
                    acdd:recommendationLevel acdd:Suggested .
 
 
-###  https://schema.acdd.dev/v1.3#resource_access_constraints
+###  https://schema.acdd.dev/v1.3/resource_access_constraints
 acdd:resource_access_constraints rdf:type owl:DatatypeProperty ;
                                  rdfs:domain owl:Thing ;
                                  rdfs:range xsd:string ;
@@ -303,7 +303,7 @@ acdd:resource_access_constraints rdf:type owl:DatatypeProperty ;
                                  acdd:recommendationLevel acdd:Recommended .
 
 
-###  https://schema.acdd.dev/v1.3#resource_contact
+###  https://schema.acdd.dev/v1.3/resource_contact
 acdd:resource_contact rdf:type owl:DatatypeProperty ;
                       rdfs:domain owl:Thing ;
                       rdfs:range xsd:string ;
@@ -313,7 +313,7 @@ acdd:resource_contact rdf:type owl:DatatypeProperty ;
                       acdd:recommendationLevel acdd:Recommended .
 
 
-###  https://schema.acdd.dev/v1.3#resource_creation-revision_date
+###  https://schema.acdd.dev/v1.3/resource_creation-revision_date
 acdd:resource_creation-revision_date rdf:type owl:DatatypeProperty ;
                                      rdfs:domain owl:Thing ;
                                      rdfs:range xsd:string ;
@@ -323,7 +323,7 @@ acdd:resource_creation-revision_date rdf:type owl:DatatypeProperty ;
                                      acdd:recommendationLevel acdd:Recommended .
 
 
-###  https://schema.acdd.dev/v1.3#resource_identifier
+###  https://schema.acdd.dev/v1.3/resource_identifier
 acdd:resource_identifier rdf:type owl:DatatypeProperty ;
                          rdfs:domain owl:Thing ;
                          rdfs:range xsd:string ;
@@ -333,7 +333,7 @@ acdd:resource_identifier rdf:type owl:DatatypeProperty ;
                          acdd:recommendationLevel acdd:Recommended .
 
 
-###  https://schema.acdd.dev/v1.3#resource_title
+###  https://schema.acdd.dev/v1.3/resource_title
 acdd:resource_title rdf:type owl:DatatypeProperty ;
                     rdfs:domain owl:Thing ;
                     rdfs:range xsd:string ;
@@ -343,7 +343,7 @@ acdd:resource_title rdf:type owl:DatatypeProperty ;
                     acdd:recommendationLevel acdd:HighlyRecommended .
 
 
-###  https://schema.acdd.dev/v1.3#southernmost_latitude
+###  https://schema.acdd.dev/v1.3/southernmost_latitude
 acdd:southernmost_latitude rdf:type owl:DatatypeProperty ;
                            rdfs:domain owl:Thing ;
                            rdfs:range xsd:double ;
@@ -353,7 +353,7 @@ acdd:southernmost_latitude rdf:type owl:DatatypeProperty ;
                            acdd:recommendationLevel acdd:Recommended .
 
 
-###  https://schema.acdd.dev/v1.3#standard_name_vocabulary
+###  https://schema.acdd.dev/v1.3/standard_name_vocabulary
 acdd:standard_name_vocabulary rdf:type owl:DatatypeProperty ;
                               rdfs:domain owl:Thing ;
                               rdfs:range xsd:string ;
@@ -363,7 +363,7 @@ acdd:standard_name_vocabulary rdf:type owl:DatatypeProperty ;
                               acdd:recommendationLevel acdd:Recommended .
 
 
-###  https://schema.acdd.dev/v1.3#start_time
+###  https://schema.acdd.dev/v1.3/start_time
 acdd:start_time rdf:type owl:DatatypeProperty ;
                 rdfs:domain owl:Thing ;
                 rdfs:range xsd:string ;
@@ -373,7 +373,7 @@ acdd:start_time rdf:type owl:DatatypeProperty ;
                 acdd:recommendationLevel acdd:Recommended .
 
 
-###  https://schema.acdd.dev/v1.3#supplemental_information
+###  https://schema.acdd.dev/v1.3/supplemental_information
 acdd:supplemental_information rdf:type owl:DatatypeProperty ;
                               rdfs:domain owl:Thing ;
                               rdfs:range xsd:string ;
@@ -383,7 +383,7 @@ acdd:supplemental_information rdf:type owl:DatatypeProperty ;
                               acdd:recommendationLevel acdd:Recommended .
 
 
-###  https://schema.acdd.dev/v1.3#temporal_extent
+###  https://schema.acdd.dev/v1.3/temporal_extent
 acdd:temporal_extent rdf:type owl:DatatypeProperty ;
                      rdfs:domain owl:Thing ;
                      rdfs:range xsd:string ;
@@ -393,7 +393,7 @@ acdd:temporal_extent rdf:type owl:DatatypeProperty ;
                      acdd:recommendationLevel acdd:Recommended .
 
 
-###  https://schema.acdd.dev/v1.3#temporal_resolution
+###  https://schema.acdd.dev/v1.3/temporal_resolution
 acdd:temporal_resolution rdf:type owl:DatatypeProperty ;
                          rdfs:domain owl:Thing ;
                          rdfs:range xsd:string ;
@@ -403,7 +403,7 @@ acdd:temporal_resolution rdf:type owl:DatatypeProperty ;
                          acdd:recommendationLevel acdd:Recommended .
 
 
-###  https://schema.acdd.dev/v1.3#vertical_maximum
+###  https://schema.acdd.dev/v1.3/vertical_maximum
 acdd:vertical_maximum rdf:type owl:DatatypeProperty ;
                       rdfs:domain owl:Thing ;
                       rdfs:range xsd:double ;
@@ -413,7 +413,7 @@ acdd:vertical_maximum rdf:type owl:DatatypeProperty ;
                       acdd:recommendationLevel acdd:Recommended .
 
 
-###  https://schema.acdd.dev/v1.3#vertical_minimum
+###  https://schema.acdd.dev/v1.3/vertical_minimum
 acdd:vertical_minimum rdf:type owl:DatatypeProperty ;
                       rdfs:domain owl:Thing ;
                       rdfs:range xsd:double ;
@@ -423,7 +423,7 @@ acdd:vertical_minimum rdf:type owl:DatatypeProperty ;
                       acdd:recommendationLevel acdd:Recommended .
 
 
-###  https://schema.acdd.dev/v1.3#westernmost_longitude
+###  https://schema.acdd.dev/v1.3/westernmost_longitude
 acdd:westernmost_longitude rdf:type owl:DatatypeProperty ;
                            rdfs:domain owl:Thing ;
                            rdfs:range xsd:double ;
@@ -437,7 +437,7 @@ acdd:westernmost_longitude rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
-###  https://schema.acdd.dev/v1.3#RecommendationLevel
+###  https://schema.acdd.dev/v1.3/RecommendationLevel
 acdd:RecommendationLevel rdf:type owl:Class ;
                          rdfs:comment "The level of recommendation for an ACDD attribute: Highly Recommended, Recommended, or Suggested."@en ;
                          rdfs:label "Recommendation Level"@en .
@@ -447,21 +447,21 @@ acdd:RecommendationLevel rdf:type owl:Class ;
 #    Individuals
 #################################################################
 
-###  https://schema.acdd.dev/v1.3#HighlyRecommended
+###  https://schema.acdd.dev/v1.3/HighlyRecommended
 acdd:HighlyRecommended rdf:type owl:NamedIndividual ,
                                 acdd:RecommendationLevel ;
                        rdfs:comment "Attributes that are highly recommended by the ACDD."@en ;
                        rdfs:label "Highly Recommended"@en .
 
 
-###  https://schema.acdd.dev/v1.3#Recommended
+###  https://schema.acdd.dev/v1.3/Recommended
 acdd:Recommended rdf:type owl:NamedIndividual ,
                           acdd:RecommendationLevel ;
                  rdfs:comment "Attributes that are recommended by the ACDD."@en ;
                  rdfs:label "Recommended"@en .
 
 
-###  https://schema.acdd.dev/v1.3#Suggested
+###  https://schema.acdd.dev/v1.3/Suggested
 acdd:Suggested rdf:type owl:NamedIndividual ,
                         acdd:RecommendationLevel ;
                rdfs:comment "Attributes that are suggested by the ACDD."@en ;

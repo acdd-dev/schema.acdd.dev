@@ -29,7 +29,7 @@
   "@id" : "http://www.w3.org/2001/XMLSchema#duration",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#",
+  "@id" : "https://schema.acdd.dev/v1.3/",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "Earth Science Information Partners (ESIP)"
@@ -56,19 +56,19 @@
     "@value" : "acdd"
   } ],
   "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
-    "@value" : "http://wiki.esipfed.org/ontology/acdd#"
+    "@value" : "https://schema.acdd.dev/v1.3/"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#"
+    "@id" : "https://schema.acdd.dev/v1.3/"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@value" : "1.3"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#HighlyRecommended",
+  "@id" : "https://schema.acdd.dev/v1.3/HighlyRecommended",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#RecommendationLevel"
+    "@id" : "https://schema.acdd.dev/v1.3/RecommendationLevel"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -79,7 +79,7 @@
     "@value" : "Highly Recommended"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#RecommendationLevel",
+  "@id" : "https://schema.acdd.dev/v1.3/RecommendationLevel",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -90,10 +90,10 @@
     "@value" : "Recommendation Level"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#Recommended",
+  "@id" : "https://schema.acdd.dev/v1.3/Recommended",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#RecommendationLevel"
+    "@id" : "https://schema.acdd.dev/v1.3/RecommendationLevel"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -104,10 +104,10 @@
     "@value" : "Recommended"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#Suggested",
+  "@id" : "https://schema.acdd.dev/v1.3/Suggested",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#RecommendationLevel"
+    "@id" : "https://schema.acdd.dev/v1.3/RecommendationLevel"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -118,7 +118,7 @@
     "@value" : "Suggested"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#abstract",
+  "@id" : "https://schema.acdd.dev/v1.3/abstract",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -137,11 +137,11 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Abstract"
   } ],
-  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#HighlyRecommended"
+  "https://schema.acdd.dev/v1.3/recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3/HighlyRecommended"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#acknowledgement",
+  "@id" : "https://schema.acdd.dev/v1.3/acknowledgement",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -160,11 +160,11 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Acknowledgement"
   } ],
-  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  "https://schema.acdd.dev/v1.3/recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3/Recommended"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#author_originator_email_address",
+  "@id" : "https://schema.acdd.dev/v1.3/author_originator_email_address",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -183,11 +183,11 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Author_/_Originator_Email_Address"
   } ],
-  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  "https://schema.acdd.dev/v1.3/recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3/Recommended"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#author_originator_www_address",
+  "@id" : "https://schema.acdd.dev/v1.3/author_originator_www_address",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -206,11 +206,11 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Author_/_Originator_World_Wide_Web_Address"
   } ],
-  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  "https://schema.acdd.dev/v1.3/recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3/Recommended"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#bounding_box",
+  "@id" : "https://schema.acdd.dev/v1.3/bounding_box",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -229,11 +229,11 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Bounding_Box"
   } ],
-  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  "https://schema.acdd.dev/v1.3/recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3/Recommended"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#common_data_model_datatype",
+  "@id" : "https://schema.acdd.dev/v1.3/common_data_model_datatype",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -252,11 +252,11 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Common_Data_Model_Datatype"
   } ],
-  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  "https://schema.acdd.dev/v1.3/recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3/Recommended"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#contributor_name",
+  "@id" : "https://schema.acdd.dev/v1.3/contributor_name",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -275,11 +275,11 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Contributor_Name"
   } ],
-  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#Suggested"
+  "https://schema.acdd.dev/v1.3/recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3/Suggested"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#contributor_role",
+  "@id" : "https://schema.acdd.dev/v1.3/contributor_role",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -298,11 +298,11 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Contributor_Role"
   } ],
-  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#Suggested"
+  "https://schema.acdd.dev/v1.3/recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3/Suggested"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#easternmost_longitude",
+  "@id" : "https://schema.acdd.dev/v1.3/easternmost_longitude",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -321,11 +321,11 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Easternmost_Longitude"
   } ],
-  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  "https://schema.acdd.dev/v1.3/recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3/Recommended"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#end_time",
+  "@id" : "https://schema.acdd.dev/v1.3/end_time",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -344,11 +344,11 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://wiki.esipfed.org/Concepts_Glossary#End_Time"
   } ],
-  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  "https://schema.acdd.dev/v1.3/recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3/Recommended"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#keyword",
+  "@id" : "https://schema.acdd.dev/v1.3/keyword",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -367,11 +367,11 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Keyword"
   } ],
-  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#HighlyRecommended"
+  "https://schema.acdd.dev/v1.3/recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3/HighlyRecommended"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#keyword_vocabulary",
+  "@id" : "https://schema.acdd.dev/v1.3/keyword_vocabulary",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -390,11 +390,11 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Keyword_Vocabulary"
   } ],
-  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  "https://schema.acdd.dev/v1.3/recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3/Recommended"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#lineage_statement",
+  "@id" : "https://schema.acdd.dev/v1.3/lineage_statement",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -413,11 +413,11 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Lineage_Statement"
   } ],
-  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  "https://schema.acdd.dev/v1.3/recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3/Recommended"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#naming_authority",
+  "@id" : "https://schema.acdd.dev/v1.3/naming_authority",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -436,11 +436,11 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Naming_Authority"
   } ],
-  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  "https://schema.acdd.dev/v1.3/recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3/Recommended"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#northernmost_latitude",
+  "@id" : "https://schema.acdd.dev/v1.3/northernmost_latitude",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -459,11 +459,11 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Northernmost_Latitude"
   } ],
-  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  "https://schema.acdd.dev/v1.3/recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3/Recommended"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#originating_organization",
+  "@id" : "https://schema.acdd.dev/v1.3/originating_organization",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -482,11 +482,11 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Originating_Organization"
   } ],
-  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  "https://schema.acdd.dev/v1.3/recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3/Recommended"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#processing_level",
+  "@id" : "https://schema.acdd.dev/v1.3/processing_level",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -505,11 +505,11 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Processing_Level"
   } ],
-  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  "https://schema.acdd.dev/v1.3/recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3/Recommended"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#project_name",
+  "@id" : "https://schema.acdd.dev/v1.3/project_name",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -528,11 +528,11 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Project_Name"
   } ],
-  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  "https://schema.acdd.dev/v1.3/recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3/Recommended"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#publisher",
+  "@id" : "https://schema.acdd.dev/v1.3/publisher",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -551,11 +551,11 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Publisher"
   } ],
-  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#Suggested"
+  "https://schema.acdd.dev/v1.3/recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3/Suggested"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#publisher_email",
+  "@id" : "https://schema.acdd.dev/v1.3/publisher_email",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -574,11 +574,11 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Publisher_E-Mail"
   } ],
-  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#Suggested"
+  "https://schema.acdd.dev/v1.3/recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3/Suggested"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#publisher_url",
+  "@id" : "https://schema.acdd.dev/v1.3/publisher_url",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -597,11 +597,11 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Publisher_URL"
   } ],
-  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#Suggested"
+  "https://schema.acdd.dev/v1.3/recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3/Suggested"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#recommendationLevel",
+  "@id" : "https://schema.acdd.dev/v1.3/recommendationLevel",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -612,10 +612,10 @@
     "@value" : "recommendation level"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#RecommendationLevel"
+    "@id" : "https://schema.acdd.dev/v1.3/RecommendationLevel"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#resource_access_constraints",
+  "@id" : "https://schema.acdd.dev/v1.3/resource_access_constraints",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -634,11 +634,11 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Resource_Access_Constraints"
   } ],
-  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  "https://schema.acdd.dev/v1.3/recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3/Recommended"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#resource_contact",
+  "@id" : "https://schema.acdd.dev/v1.3/resource_contact",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -657,11 +657,11 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Resource_Contact"
   } ],
-  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  "https://schema.acdd.dev/v1.3/recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3/Recommended"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#resource_creation-revision_date",
+  "@id" : "https://schema.acdd.dev/v1.3/resource_creation-revision_date",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -680,11 +680,11 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Resource_Creation/Revision_Date"
   } ],
-  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  "https://schema.acdd.dev/v1.3/recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3/Recommended"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#resource_identifier",
+  "@id" : "https://schema.acdd.dev/v1.3/resource_identifier",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -703,11 +703,11 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Resource_Identifier"
   } ],
-  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  "https://schema.acdd.dev/v1.3/recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3/Recommended"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#resource_title",
+  "@id" : "https://schema.acdd.dev/v1.3/resource_title",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -726,11 +726,11 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Resource_Title"
   } ],
-  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#HighlyRecommended"
+  "https://schema.acdd.dev/v1.3/recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3/HighlyRecommended"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#southernmost_latitude",
+  "@id" : "https://schema.acdd.dev/v1.3/southernmost_latitude",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -749,11 +749,11 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Southernmost_Latitude"
   } ],
-  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  "https://schema.acdd.dev/v1.3/recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3/Recommended"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#standard_name_vocabulary",
+  "@id" : "https://schema.acdd.dev/v1.3/standard_name_vocabulary",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -772,11 +772,11 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Standard_Name_Vocabulary"
   } ],
-  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  "https://schema.acdd.dev/v1.3/recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3/Recommended"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#start_time",
+  "@id" : "https://schema.acdd.dev/v1.3/start_time",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -795,11 +795,11 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Start_Time"
   } ],
-  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  "https://schema.acdd.dev/v1.3/recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3/Recommended"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#supplemental_information",
+  "@id" : "https://schema.acdd.dev/v1.3/supplemental_information",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -818,11 +818,11 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Supplemental_Information"
   } ],
-  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  "https://schema.acdd.dev/v1.3/recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3/Recommended"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#temporal_extent",
+  "@id" : "https://schema.acdd.dev/v1.3/temporal_extent",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -841,11 +841,11 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Temporal_Extent"
   } ],
-  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  "https://schema.acdd.dev/v1.3/recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3/Recommended"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#temporal_resolution",
+  "@id" : "https://schema.acdd.dev/v1.3/temporal_resolution",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -864,11 +864,11 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Temporal_Resolution"
   } ],
-  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  "https://schema.acdd.dev/v1.3/recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3/Recommended"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#vertical_maximum",
+  "@id" : "https://schema.acdd.dev/v1.3/vertical_maximum",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -887,11 +887,11 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Vertical_Maximum"
   } ],
-  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  "https://schema.acdd.dev/v1.3/recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3/Recommended"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#vertical_minimum",
+  "@id" : "https://schema.acdd.dev/v1.3/vertical_minimum",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -910,11 +910,11 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Vertical_Minimum"
   } ],
-  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  "https://schema.acdd.dev/v1.3/recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3/Recommended"
   } ]
 }, {
-  "@id" : "https://schema.acdd.dev/v1.3#westernmost_longitude",
+  "@id" : "https://schema.acdd.dev/v1.3/westernmost_longitude",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -933,7 +933,7 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://wiki.esipfed.org/Concepts_Glossary#Westernmost_Longitude"
   } ],
-  "https://schema.acdd.dev/v1.3#recommendationLevel" : [ {
-    "@id" : "https://schema.acdd.dev/v1.3#Recommended"
+  "https://schema.acdd.dev/v1.3/recommendationLevel" : [ {
+    "@id" : "https://schema.acdd.dev/v1.3/Recommended"
   } ]
 } ]
