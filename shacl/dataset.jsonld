@@ -1,0 +1,10 @@
+{
+    "@context": { "@vocab": "https://schema.org/" },
+
+    "@id": "http://example.org/Dataset",
+    "@type": "Dataset",
+    "name": "Dataset Title",
+    "abstract": "Dataset description goes here",
+    "keywords": ["keyword1", "keyword2", {"@type": "DefinedTerm", "name": "keyword3"}],
+    "identifier": "doi:10.1234/56789"
+}
