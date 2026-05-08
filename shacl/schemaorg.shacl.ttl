@@ -455,28 +455,32 @@ acdd:SchemaOrgProjectNamePropertyShape
     sh:path         schema:funding ;
     sh:name         "Project Name to Dataset > funding > (name or sponsor > name)" ;
     sh:description  "ACDD Project Name to schema:Dataset > schema:funding (schema:Grant) > (schema:name or schema:sponsor (schema:ResearchProject) > schema:name)."@en ;
-    sh:node  
+    sh:qualifiedMinCount 1;
+    sh:qualifiedValueShape [
+      sh:node  
         [
             a               sh:NodeShape ;
-            sh:targetClass  schema:Grant ;
-
-            sh:or (
+            sh:class  schema:Grant ;
+           sh:or (
                 [ sh:property   acdd:SchemaOrgNamePropertyShape ]
                 [
                     sh:property [
                         a               sh:PropertyShape ;
                         sh:path         schema:sponsor ;
-                        sh:minCount     1 ;
-                        sh:class        schema:ResearchProject ;
-                        sh:node         [
+                        sh:qualifiedMinCount 1;
+                        sh:qualifiedValueShape [
+                          sh:node         [
                             a           sh:NodeShape ;
+                            sh:class        schema:ResearchProject ;
                             sh:property acdd:SchemaOrgNamePropertyShape ;
+                          ]
                         ]
                     ]
                 ]
             )
 
-        ] ;
+        ]
+    ] ;
     sh:severity     sh:Warning ;
     skos:broadMatch   acdd:project_name .
 
