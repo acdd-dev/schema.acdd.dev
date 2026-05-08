@@ -8,6 +8,46 @@
 @prefix dct:     <http://purl.org/dc/terms/> .
 @prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
 
+# -------------------------------------------------------------------------
+# SUPPORTING SHAPES
+# -------------------------------------------------------------------------
+
+acdd:SchemaOrgValuePropertyShape
+    a   sh:PropertyShape ;
+    sh:property [
+        sh:path     schema:value ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:minLength 1 ;
+    ] .
+
+acdd:SchemaOrgNamePropertyShape
+    a   sh:PropertyShape ;
+    sh:property [
+        sh:path     schema:name ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:minLength 1 ;
+    ] .
+
+acdd:SchemaOrgEmailPropertyShape
+    a   sh:PropertyShape ;
+    sh:property [
+        sh:path     schema:email ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:minLength 1 ;
+    ]  .
+
+acdd:SchemaOrgUrlPropertyShape
+    a   sh:PropertyShape ;
+    sh:property [
+        sh:path     schema:url ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:minLength 1 ;
+    ] .
+
 # =============================================================================
 # Top-level shape: schema:Dataset
 # =============================================================================
@@ -72,10 +112,12 @@ acdd:SchemaOrgResourceTitlePropertyShape
     sh:path         schema:name ;
     sh:name         "Resource Title to Dataset > name" ;
     sh:description  "ACDD Resource Title to [schema:Dataset] > schema:name."@en ;
-    sh:datatype     xsd:string ;
-    sh:minCount     1 ;
-    sh:maxCount     1 ;
-    sh:minLength    1 ;
+    sh:qualifiedMinCount     1 ;
+    sh:qualifiedValueShape [
+        a               sh:PropertyShape ;
+        sh:minLength    1 ;
+        sh:datatype     xsd:string 
+    ] ;
     sh:severity     sh:Warning ;
     sh:message "Resource Title is highly recommended. This should appear as `schema:name` on a `schema:Dataset`" ;
     skos:exactMatch   acdd:resource_title .
@@ -87,10 +129,12 @@ acdd:SchemaOrgAbstractPropertyShape
     sh:path         schema:abstract ;
     sh:name         "Resource Title to Dataset > abstract" ;
     sh:description  "ACDD Resource Title to [schema:Dataset] > schema:abstract."@en ;
-    sh:datatype     xsd:string ;
-    sh:minCount     1 ;
-    sh:maxCount     1 ;
-    sh:minLength    1 ;
+    sh:qualifiedMinCount     1 ;
+    sh:qualifiedValueShape [
+        a               sh:PropertyShape ;
+        sh:minLength    1 ;
+        sh:datatype     xsd:string 
+    ] ;
     sh:severity     sh:Warning ;
     sh:message "Abstract is highly recommended. This should appear as `schema:abstract` on a `schema:Dataset`" ;
     skos:exactMatch   acdd:abstract .
@@ -102,8 +146,9 @@ acdd:SchemaOrgKeywordPropertyShape
     sh:path         schema:keywords ;
     sh:name         "Keyword to Dataset > keywords" ;
     sh:description  "ACDD Keyword to [schema:Dataset] > schema:keywords"@en ;
-    sh:minCount     1 ;
-    sh:or (
+    sh:qualifiedMinCount     1 ;
+    sh:qualifiedValueShape [
+      sh:or (
         [ sh:datatype xsd:string ; sh:minLength 1 ]
         [ 
             sh:class    schema:DefinedTerm ;
@@ -116,9 +161,10 @@ acdd:SchemaOrgKeywordPropertyShape
                 ]
             ]
         ]
-    ) ;
+      )
+    ] ;
     sh:severity     sh:Warning ;
-    sh:message "[Highly Recommended] MIssing Keyword at schema:keywords" ;
+    sh:message "[Highly Recommended] Missing Keyword at schema:keywords" ;
     skos:exactMatch   acdd:keyword .
 
 # =============================================================================
@@ -132,33 +178,39 @@ acdd:SchemaOrgResourceIdentifierPropertyShape
     sh:path         schema:identifier ;
     sh:name         "Resource Identifier to Dataset > identifier" ;
     sh:description  "ACDD Resource Identifier to [schema:Dataset] > schema:identifier."@en ;
-    sh:minCount     1 ;
-    sh:or (
-        [ sh:datatype xsd:string ; sh:minLength 1 ]
-        [ sh:datatype xsd:anyURI ; sh:minLength 1 ]
-        [
-            sh:class schema:PropertyValue ;
-            sh:node [
-                a sh:NodeShape ;
-                sh:property acdd:SchemaOrgValuePropertyShape
+    sh:qualifiedMinCount 1 ;
+    sh:qualifiedValueShape [
+        sh:or (
+            [ sh:datatype xsd:string ; sh:minLength 1 ]
+            [ sh:datatype xsd:anyURI ; sh:minLength 1 ]
+            [
+                sh:class schema:PropertyValue ;
+                sh:node [
+                    a sh:NodeShape ;
+                    sh:property acdd:SchemaOrgValuePropertyShape
+                ]
             ]
-        ]
-    ) ;
+        )
+    ] ;
     sh:message "[Recommended] Missing Resource Identifier at schema:identifier" ;
     sh:severity     sh:Warning ;
-    skos:exactMatch   acdd:resource_identifier .
+    skos:exactMatch acdd:resource_identifier .
 
 # --- naming_authority → schema:publisher ----------------------------------------------
 
 acdd:SchemaOrgNamingAuthorityPropertyShape
     a               sh:PropertyShape ;
     sh:path         schema:publisher ;
-    sh:name         "Naming Authority to Schema Dataset > Publisher" ;
-    sh:description  "ACDD Naming Authority to [schema:Dataset] > schema:publisher."@en ;
-    sh:or (
+    sh:name         "Naming Authority to Schema Dataset > Publisher > name" ;
+    sh:description  "ACDD Naming Authority to [schema:Dataset] > schema:publisher(schema:Person or schema:Organization) > schema:name."@en ;
+    sh:qualifiedMinCount 1 ;
+    sh:qualifiedValueShape [
+      sh:or (
         [ sh:class  schema:Organization ]
         [ sh:class  schema:Person ]
-    ) ;
+      ) ;
+      sh:property acdd:SchemaOrgNamePropertyShape
+    ] ;
     sh:message "[Recommended] Missing Naming Authority at schema:publisher" ;
     sh:severity     sh:Warning ;
     skos:closeMatch   acdd:naming_authority .
@@ -166,31 +218,32 @@ acdd:SchemaOrgNamingAuthorityPropertyShape
 # --- keyword_vocabulary → schema:publisher ----------------------------------------------
 
 acdd:SchemaOrgKeywordVocabularyPropertyShape
-    a               sh:PropertyShape ;
-    sh:path         schema:keywords ;
-    sh:name         "Keyword Vocabulary to Schema Dataset > keywords > inDefinedTermSet > name" ;
-    sh:description  "ACDD Keyword Vocabulary to [schema:Dataset] > schema:keywords [schema:DefinedTerm] > schema:inDefinedTermSet (DefinedTermSet) > schema:name."@en ;
-    sh:qualifiedMinCount 1 ;
+    a                       sh:PropertyShape ;
+    sh:path                 schema:keywords ;
+    sh:name                 "Keyword Vocabulary to Schema Dataset > keywords > inDefinedTermSet > name" ;
+    sh:description          "ACDD Keyword Vocabulary to [schema:Dataset] > schema:keywords [schema:DefinedTerm] > schema:inDefinedTermSet (DefinedTermSet) > schema:name."@en ;
+    sh:qualifiedMinCount    1 ;
     sh:qualifiedValueShape [
         a               sh:NodeShape ;
         sh:class        schema:DefinedTerm ;
-        sh:property acdd:SchemaOrgNamePropertyShape ;
+        sh:property     acdd:SchemaOrgNamePropertyShape ;
         sh:property [
-            a               sh:PropertyShape ;
-            sh:path         schema:inDefinedTermSet ;
-            sh:description  "The controlled vocabulary this keyword belongs to."@en ;
-            sh:minCount     1 ;
-            sh:maxCount     1 ;
-            sh:class        schema:DefinedTermSet ;
-            sh:node         [ 
-                a               sh:NodeShape ;
-                sh:property     acdd:SchemaOrgNamePropertyShape ;
+            a                       sh:PropertyShape ;
+            sh:path                 schema:inDefinedTermSet ;
+            sh:description          "The controlled vocabulary this keyword belongs to."@en ;
+            sh:qualifiedMinCount    1 ;
+            sh:qualifiedValueShape [
+                sh:node         [ 
+                    a               sh:NodeShape ;
+                    sh:class        schema:DefinedTermSet ;
+                    sh:property     acdd:SchemaOrgNamePropertyShape ;
+                ]
             ]
         ]
     ] ;
-    sh:message "[Recommended] Missing Keyword Vocabulary at schema:keywords (at least 1 schema:DefinedTerm -> schema:inDefinedTermSet -> schema:name)" ;
+    sh:message      "[Recommended] Missing Keyword Vocabulary at schema:keywords (at least 1 schema:DefinedTerm -> schema:inDefinedTermSet -> schema:name)" ;
     sh:severity     sh:Warning ;
-    skos:closeMatch   acdd:keyword_vocabulary .
+    skos:closeMatch acdd:keyword_vocabulary .
 
 # --- common_data_model_datatype → schema:encodingFormat ---------------------------------
 
@@ -241,9 +294,12 @@ acdd:SchemaOrgSupplementalInformationPropertyShape
     sh:path         schema:description ;
     sh:name         "Supplemental Information to Schema Dataset > description" ;
     sh:description  "ACDD Supplemental Information to [schema:Dataset] > schema:description."@en ;
-    sh:minCount     1 ;
-    sh:minLength    1 ;
-    sh:datatype     xsd:string ;
+    sh:qualifiedMinCount     1 ;
+    sh:qualifiedValueShape [
+        a               sh:PropertyShape ;
+        sh:minLength    1 ;
+        sh:datatype     xsd:string 
+    ] ;
     sh:message "[Recommended] Missing Supplemental Information at schema:description" ;
     sh:severity     sh:Warning ;
     skos:relatedMatch   acdd:supplemental_information .
@@ -255,13 +311,14 @@ acdd:SchemaOrgResourceCreationRevisionDatePropertyShape
     sh:path         schema:datePublished ;
     sh:name         "Resource Creation/Revision Date to Schema Dataset > datePublished" ;
     sh:description  "ACDD Resource Creation/Revision Date to [schema:Dataset] > schema:datePublished."@en ;
-    sh:minCount     1 ;
-    sh:minLength    1 ;
-    sh:or (
+    sh:qualifiedMinCount     1 ;
+    sh:qualifiedValueShape [
+      sh:or (
         [ sh:datatype xsd:string ; sh:minLength 1 ]
         [ sh:datatype xsd:date ; sh:minLength 1 ]
         [ sh:datatype xsd:dateTime ; sh:minLength 1 ]
-    ) ;
+      )
+    ] ;
     sh:message "[Recommended] Missing Resource Creation/Revision Date at schema:datePublished" ;
     sh:severity     sh:Warning ;
     skos:closeMatch   acdd:resource_creation-revision_date .
@@ -273,8 +330,9 @@ acdd:SchemaOrgResourceContactPropertyShape
     sh:path         schema:contactPoint ;
     sh:name         "Resource Contact to Schema Dataset > contactPoint" ;
     sh:description  "ACDD Resource Contact to [schema:Dataset] > schema:contactPoint."@en ;
-    sh:minCount     1 ;
-    sh:or (
+    sh:qualifiedMinCount     1 ;
+    sh:qualifiedValueShape [
+      sh:or (
         [
             sh:class schema:Organization ;
             sh:node [
@@ -289,8 +347,8 @@ acdd:SchemaOrgResourceContactPropertyShape
                 sh:property acdd:SchemaOrgNamePropertyShape
             ]
         ]
-    ) ;
-    
+      ) 
+    ] ;
     sh:message "[Recommended] Missing Resource Contact at schema:contactPoint(schema:Person or schema:Organization) -> schema:name" ;
     sh:severity     sh:Warning ;
     skos:closeMatch   acdd:resource_contact .
@@ -301,8 +359,9 @@ acdd:SchemaOrgAuthorOriginatorWWWAddressPropertyShape
     sh:path         schema:creator ;
     sh:name         "Author / Originator WWW Address to Dataset > creator > url" ;
     sh:description  "ACDD Author / Originator WWW Address to schema:Dataset > schema:creator > schema:url"@en ;
-    sh:minCount     1 ;
-    sh:or (
+    sh:qualifiedMinCount     1 ;
+    sh:qualifiedValueShape [
+      sh:or (
         [
             sh:class schema:Organization ;
             sh:node [
@@ -317,8 +376,8 @@ acdd:SchemaOrgAuthorOriginatorWWWAddressPropertyShape
                 sh:property acdd:SchemaOrgUrlPropertyShape
             ]
         ]
-    ) ;
-
+      ) 
+    ] ;
     sh:message "[Recommended] Missing Author / Originator WWW Address at schema:creator(schema:Person or schema:Organization) -> schema:url" ;
     sh:severity     sh:Warning ;
     skos:closeMatch   acdd:author_originator_www_address .
@@ -328,8 +387,9 @@ acdd:SchemaOrgAuthorOriginatorEmailAddressPropertyShape
     sh:path         schema:creator ;
     sh:name         "Author / Originator Email Address to Dataset > creator > email" ;
     sh:description  "ACDD Author / Originator Email Address to schema:Dataset > schema:creator > schema:email"@en ;
-    sh:minCount     1 ;
-    sh:or (
+    sh:qualifiedMinCount     1 ;
+    sh:qualifiedValueShape [
+      sh:or (
         [
             sh:class schema:Organization ;
             sh:node [
@@ -344,8 +404,8 @@ acdd:SchemaOrgAuthorOriginatorEmailAddressPropertyShape
                 sh:property acdd:SchemaOrgEmailPropertyShape
             ]
         ]
-    ) ;
-
+      ) 
+    ] ;
     sh:message "[Recommended] Missing Author / Originator Email Address at schema:creator(schema:Person or schema:Organization) -> schema:url" ;
     sh:severity     sh:Warning ;
     skos:closeMatch acdd:author_originator_email_address .
@@ -357,28 +417,33 @@ acdd:OriginatingOrganizationPropertyShape
     sh:name         "Originating Organization to Dataset > creator > affiliation" ;
     sh:description  "ACDD Originating Organization to schema:Dataset > (schema:creator(schema:Organization) or schema:creator(schema:Person) > schema:affiliation"@en ;
     sh:qualifiedMinCount 1 ;
-    sh:or (
-        [ sh:node  
-            [
-                a               sh:NodeShape ;
-                sh:targetClass  schema:Person ;
-                sh:property [
-                    a               sh:PropertyShape ;
-                    sh:path         schema:affiliation ;
-                    sh:minCount     1 ;
-                    sh:class        schema:Organization ;
-                    sh:property acdd:SchemaOrgNamePropertyShape
+    sh:qualifiedValueShape [
+        sh:or (
+            [ 
+                sh:class  schema:Person ;
+                sh:node  
+                [
+                    a               sh:NodeShape ;
+                    sh:property [
+                        a               sh:PropertyShape ;
+                        sh:path         schema:affiliation ;
+                        sh:qualifiedMinCount 1 ;
+                        sh:qualifiedValueShape [
+                          sh:property acdd:SchemaOrgNamePropertyShape
+                        ]
+                    ] 
                 ] 
-            ] 
-        ]
-        [ sh:node  
-            [
-                a               sh:NodeShape ;
-                sh:targetClass  schema:Organization ;
-                sh:property     acdd:SchemaOrgNamePropertyShape ;
-            ] 
-        ]
-    ) ;
+            ]
+            [ 
+                sh:class  schema:Organization ;
+                sh:node  
+                [
+                    a               sh:NodeShape ;
+                    sh:property     acdd:SchemaOrgNamePropertyShape ;
+                ] 
+            ]
+        ) 
+    ] ;
     sh:message "[Recommended] Missing Originating Organization at schema:creator((schema:Person ->schema:affiliation) or schema:Organization) -> schema:name" ;
     sh:severity     sh:Warning ;
     skos:broadMatch   acdd:originating_organization .
@@ -746,44 +811,3 @@ acdd:SchemaOrgPublisherEmailPropertyShape
     sh:node         acdd:SchemaOrgEmailPropertyShape ;
     sh:severity     sh:Info ;
     skos:exactMatch acdd:publisher_email .
-
-
-# -------------------------------------------------------------------------
-# SUPPORTING SHAPES
-# -------------------------------------------------------------------------
-
-acdd:SchemaOrgValuePropertyShape
-    a   sh:PropertyShape ;
-    sh:property [
-        sh:path     schema:value ;
-        sh:datatype xsd:string ;
-        sh:minCount 1 ;
-        sh:minLength 1 ;
-    ] .
-
-acdd:SchemaOrgNamePropertyShape
-    a   sh:PropertyShape ;
-    sh:property [
-        sh:path     schema:name ;
-        sh:datatype xsd:string ;
-        sh:minCount 1 ;
-        sh:minLength 1 ;
-    ] .
-
-acdd:SchemaOrgEmailPropertyShape
-    a   sh:PropertyShape ;
-    sh:property [
-        sh:path     schema:email ;
-        sh:datatype xsd:string ;
-        sh:minCount 1 ;
-        sh:minLength 1 ;
-    ]  .
-
-acdd:SchemaOrgUrlPropertyShape
-    a   sh:PropertyShape ;
-    sh:property [
-        sh:path     schema:url ;
-        sh:datatype xsd:string ;
-        sh:minCount 1 ;
-        sh:minLength 1 ;
-    ] .

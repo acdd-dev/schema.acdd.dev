@@ -2,12 +2,9 @@
     "@context": { "@vocab": "https://schema.org/" },
     "@id": "http://example.org/Dataset",
     "@type": "Dataset",
-    "name": "Dataset Title",
-    "description": "s",
-    "abstract": "Dataset description goes here",
-    "keywords": ["keyword1", "keyword2", {"@type": "DefinedTerm", "inDefinedTermSet": {"name": "TermSet", "@type": "DefinedTermSet"}, "name": "keyword3"}],
-    "identifier": "doi:10.1234/56789",
-    "datePublished": "2027-03-23T11:32:00",
+    "name": "Title",
+    "description": ["supplemental info", ""],
+    "datePublished": "2026-05",
     "additionalProperty": [
       {
         "@type": "PropertyValue",
@@ -20,6 +17,44 @@
         "value": "Provenance"
       }
     ],
-    "contactPoint": {"@id": "urn:adam", "@type": "Person", "name": "Adam", "url": "https://www.whoi.edu", "email": "adam@whoi.edu"},
-    "creator": {"@id": "urn:adam"}
+    "contactPoint": {
+        "@id": "urn:adam", 
+        "@type": "Person", 
+        "name": "Adam", 
+        "url": "https://www.whoi.edu",
+        "email": "adam@whoi.edu",
+        "affiliation": [{"@type": "Organization", "name": "Test Org"}, "Test"]
+    },
+    "creator": [{"@id": "urn:adam"}, {"@type": "Organization", "name": "Test Org"}],
+    "publisher": ["Test Publisher", {"@id": "urn:adam"}],
+    "funding": [
+      {
+        "@type": "Grant",
+        "name": "my grant"
+      },
+      {
+        "@type": "Grant",
+        "sponsor": [
+          {
+            "@type": "ResearchProject",
+            "value": "my grant project"
+          }
+        ]
+      }
+    ],
+    "keywords": [
+        "keyword1", 
+        "keyword2", 
+        {
+            "@type": "DefinedTerm", 
+            "inDefinedTermSet": [
+              {
+                "name": "TermSet", 
+                "@type": "DefinedTermSet"
+              },
+              "Test"
+            ], 
+            "name": "keyword3"
+        }
+    ]
 }
