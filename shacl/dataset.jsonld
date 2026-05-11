@@ -1,11 +1,29 @@
 {
-    "@context": { "@vocab": "https://schema.org/" },
+    "@context": { 
+      "@vocab": "https://schema.org/",
+      "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
     "@id": "http://example.org/Dataset",
     "@type": "Dataset",
     "name": "Title",
+    "abstract": "Abstract goes here",
+    "identifier": [
+      "my id",
+      {
+         "@type": "PropertyValue",
+         "propertyID": "https://registry.identifiers.org/registry/doi",
+         "value": "ID"
+      }
+    ],
+    "creativeWorkStatus": ["drafted", {"@type": "DefinedTerm", "name": "Draft"}],
     "description": ["supplemental info", ""],
     "datePublished": "2026-05",
     "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "propertyID": "https://schema.acdd.dev/v1.3/temporal_resolution",
+        "value": "Y-M-D"
+      },
       {
         "@type": "PropertyValue",
         "propertyID": "https://schema.acdd.dev/v1.3/common_data_model_datatype",
@@ -15,29 +33,52 @@
         "@type": "PropertyValue",
         "propertyID": "https://schema.acdd.dev/v1.3/lineage_statement",
         "value": "Provenance"
+      },
+      {
+        "@type": "PropertyValue",
+        "propertyID": "https://schema.acdd.dev/v1.3/standard_name_vocabulary",
+        "value": "NERC"
       }
     ],
     "contactPoint": {
         "@id": "urn:adam", 
-        "@type": "Person", 
+        "@type": "Person",
         "name": "Adam", 
-        "url": "https://www.whoi.edu",
-        "email": "adam@whoi.edu",
+        "email": "ashepherd@whoi.edu",
+        "url": "https://example.org",
         "affiliation": [{"@type": "Organization", "name": "Test Org"}, "Test"]
     },
-    "creator": [{"@id": "urn:adam"}, {"@type": "Organization", "name": "Test Org"}],
+    "creator": [
+      "Boba", 
+      {"@id": "urn:adam"}, 
+      {"@type": "Organization", "name": "Test Org"},
+      {
+        "@type": "Role", 
+        "roleName": "author", 
+        "creator": {"@id": "urn:adam"}
+      }
+    ],
+    "contributor": [
+      "Fett", 
+      {
+        "@type": "Role", 
+        "roleName": "curator", 
+        "contributor": {"@id": "urn:adam"}
+      }
+    ],
     "publisher": ["Test Publisher", {"@id": "urn:adam"}],
     "funding": [
       {
         "@type": "Grant",
-        "name": "my grant"
+        "value": "my grant"
       },
       {
         "@type": "Grant",
+        "funder": { "@type": "Organization", "name": ["NSF", "National Science Foundation"] },
         "sponsor": [
           {
             "@type": "ResearchProject",
-            "value": "my grant project"
+            "name": "my grant project"
           }
         ]
       }
@@ -56,5 +97,32 @@
             ], 
             "name": "keyword3"
         }
-    ]
+    ],
+    "spatialCoverage": [
+       "Georgia",
+      {
+         "@type": "Place",
+         "geo": [
+           {
+             "@type": "GeoShape",
+             "box": ["1 2, 3 4", ""],
+             "additionalProperty": [
+               "something extra we can ignore",
+               {
+                  "@type": "PropertyValue",
+                  "propertyID": "depth",
+                  "minValue": 10,
+                  "maxValue": 1
+               }
+             ]
+           },
+           {
+             "@type": "GeoCoordinates",
+             "box": "1 2, 3 4"
+           }
+         ]
+      }
+    ],
+    "temporalCoverage": "2024-04-12/2025-04",
+    "license": [{"@type": "CreativeWork", "name": "CC-BY-4.0"}]
 }

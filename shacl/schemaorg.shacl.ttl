@@ -23,30 +23,34 @@ acdd:SchemaOrgValuePropertyShape
 
 acdd:SchemaOrgNamePropertyShape
     a   sh:PropertyShape ;
-    sh:property [
-        sh:path     schema:name ;
+    sh:path         schema:name ;
+    sh:minCount     1 ;
+    sh:qualifiedMinCount 1 ;
+    sh:qualifiedValueShape [
         sh:datatype xsd:string ;
-        sh:minCount 1 ;
         sh:minLength 1 ;
     ] .
 
 acdd:SchemaOrgEmailPropertyShape
     a   sh:PropertyShape ;
-    sh:property [
-        sh:path     schema:email ;
+    sh:path         schema:email ;
+    sh:minCount     1 ;
+    sh:qualifiedMinCount 1 ;
+    sh:qualifiedValueShape [
         sh:datatype xsd:string ;
-        sh:minCount 1 ;
         sh:minLength 1 ;
-    ]  .
+    ] .
 
 acdd:SchemaOrgUrlPropertyShape
     a   sh:PropertyShape ;
-    sh:property [
-        sh:path     schema:url ;
+    sh:path         schema:url ;
+    sh:minCount     1 ;
+    sh:qualifiedMinCount 1 ;
+    sh:qualifiedValueShape [
         sh:datatype xsd:string ;
-        sh:minCount 1 ;
         sh:minLength 1 ;
     ] .
+
 
 # =============================================================================
 # Top-level shape: schema:Dataset
@@ -154,11 +158,7 @@ acdd:SchemaOrgKeywordPropertyShape
             sh:class    schema:DefinedTerm ;
             sh:node [
                 a sh:NodeShape ;
-                sh:property [
-                    sh:path      schema:name ;
-                    sh:minCount  1 ;
-                    sh:minLength 1 ;
-                ]
+                sh:property acdd:SchemaOrgNamePropertyShape 
             ]
         ]
       )
@@ -200,18 +200,22 @@ acdd:SchemaOrgResourceIdentifierPropertyShape
 
 acdd:SchemaOrgNamingAuthorityPropertyShape
     a               sh:PropertyShape ;
-    sh:path         schema:publisher ;
-    sh:name         "Naming Authority to Schema Dataset > Publisher > name" ;
-    sh:description  "ACDD Naming Authority to [schema:Dataset] > schema:publisher(schema:Person or schema:Organization) > schema:name."@en ;
+    sh:path         schema:identifier ;
+    sh:name         "Resource Identifier to Dataset > identifier" ;
+    sh:description  "ACDD Resource Identifier to [schema:Dataset] > schema:identifier."@en ;
     sh:qualifiedMinCount 1 ;
     sh:qualifiedValueShape [
-      sh:or (
-        [ sh:class  schema:Organization ]
-        [ sh:class  schema:Person ]
-      ) ;
-      sh:property acdd:SchemaOrgNamePropertyShape
+        sh:class schema:PropertyValue ;
+        sh:node [
+            a sh:NodeShape ;
+            sh:property [
+                sh:path     schema:propertyID ;
+                sh:minCount 1 ;
+            ]
+        ]
+
     ] ;
-    sh:message "[Recommended] Missing Naming Authority at schema:publisher" ;
+    sh:message "[Recommended] Missing Naming Authority at schema:idnetiifer(schema:PropertyValue) > schema:propertyID" ;
     sh:severity     sh:Warning ;
     skos:closeMatch   acdd:naming_authority .
 
@@ -410,7 +414,6 @@ acdd:SchemaOrgAuthorOriginatorEmailAddressPropertyShape
     sh:severity     sh:Warning ;
     skos:closeMatch acdd:author_originator_email_address .
 
-
 acdd:OriginatingOrganizationPropertyShape
     a               sh:PropertyShape ;
     sh:path         schema:creator ;
@@ -481,6 +484,7 @@ acdd:SchemaOrgProjectNamePropertyShape
 
         ]
     ] ;
+    sh:message "[Recommended] Missing Project Name at schema:funding(schema:Grant) > (schema:name or schema:sponsor (schema:ResearchProject) > schema:name)" ;
     sh:severity     sh:Warning ;
     skos:broadMatch   acdd:project_name .
 
@@ -491,24 +495,78 @@ acdd:SchemaOrgProcessingLevelPropertyShape
     sh:path         schema:creativeWorkStatus ;
     sh:name         "processing_level to creativeWorkStatus" ;
     sh:description  "ACDD Processing Level to schema:Dataset > schema:creativeWorkStatus."@en ;
-    sh:or (
-        [ sh:datatype xsd:string ]
-        [ sh:class    schema:DefinedTerm ]
-    ) ;
+    sh:qualifiedMinCount 1 ;
+    sh:qualifiedValueShape [
+      sh:or (
+        [ sh:datatype xsd:string ; sh:minLength 1 ]
+        [ 
+            sh:class    schema:DefinedTerm ;
+            sh:node [
+                a sh:NodeShape ;
+                sh:property acdd:SchemaOrgNamePropertyShape 
+            ]
+        ]
+      )
+    ] ;
+    sh:message "[Recommended] Missing Processing Level at (schema:creativeWorkStatus or schema:creativeWorkStatus(schema:DefinedTerm) > schema:name)" ;
     sh:severity     sh:Warning ;
     skos:relatedMatch   acdd:processing_level .
 
 # --- acknowledgement → schema:funder  ----------------------
 
 acdd:SchemaOrgAcknowledgementPropertyShape
-    a               sh:PropertyShape ;
-    sh:path         schema:funder ;
-    sh:name         "acknowledgement to funder" ;
-    sh:description  "ACDD Acknowledgement > schema:Dataset > schema:funder"@en ;
+    a               sh:NodeShape ;
     sh:or (
-        [ sh:class    schema:Organization ]
-        [ sh:class    schema:Person ]
+        [
+            sh:property [
+                a               sh:PropertyShape ;
+                sh:path         schema:funder ;
+                sh:name         "acknowledgement to funder" ;
+                sh:description  "ACDD Acknowledgement > schema:Dataset > schema:funder"@en ;
+                sh:qualifiedMinCount 1 ;
+                sh:qualifiedValueShape [
+                    sh:or (
+                        [
+                            sh:class schema:Organization ;
+                            sh:property acdd:SchemaOrgNamePropertyShape ;
+                        ]
+                        [
+                            sh:class schema:Person ;
+                            sh:property acdd:SchemaOrgNamePropertyShape ;
+                        ]
+                    )
+                ]
+            ]
+        ]
+        [
+            sh:property [
+                a               sh:PropertyShape ;
+                sh:path         schema:funding ;
+                sh:qualifiedMinCount 1 ;
+                sh:qualifiedValueShape [
+                    sh:class schema:Grant ;
+                    sh:property [
+                        a               sh:PropertyShape ;
+                        sh:path         schema:funder ;
+                        sh:qualifiedMinCount 1 ;
+                        sh:qualifiedValueShape [
+                            sh:or (
+                                [
+                                    sh:class schema:Organization ;
+                                    sh:property acdd:SchemaOrgNamePropertyShape ;
+                                ]
+                                [
+                                    sh:class schema:Person ;
+                                    sh:property acdd:SchemaOrgNamePropertyShape ;
+                                ]
+                            )
+                        ]
+                    ]
+                ]
+            ]
+        ]
     ) ;
+    sh:message "[Recommended] Missing Acknowledgement at ((schema:funder(schema:Organization or schema:Person) > schema:name) or (schema:funding(schema:Grant) > (schema:Organization or schema:Person)> schema:name))" ;
     sh:severity     sh:Warning ;
     skos:broadMatch acdd:acknowledgement .
 
@@ -519,34 +577,29 @@ acdd:SchemaOrgBoundingBoxPropertyShape
     sh:path         schema:spatialCoverage ;
     sh:name         "bounding_box to spatialCoverage > geo > box" ;
     sh:description  "ACDD Bounding Box to schema:Dataset > schema:spatialCoverage(schema:Place) > schema:geo(schema:GeoShape) > schema:box"@en ;
-    sh:class        schema:Place ;
-    sh:node         [
-        a               sh:NodeShape ;
-        sh:targetClass  schema:Place ;
-        rdfs:label      "Place with GeoShape bounding box"@en ;
+    sh:qualifiedMinCount 1 ;
+    sh:qualifiedValueShape [
+        sh:class schema:Place ;
         sh:property [
             sh:path     schema:geo ;
-            sh:class    schema:GeoShape ;
-            sh:minCount 1 ;
-            sh:node     [
-                a               sh:NodeShape ;
-                sh:targetClass  schema:GeoShape ;
-                rdfs:label      "GeoShape (bounding box)"@en ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedValueShape [
+                sh:class schema:GeoShape ;
                 sh:property [
-                    sh:name         "westernmost_longitude, easternmost_longitude, southernmost_latitude, northernmost_latitude to spatialCoverage > geo > box" ;
-                    sh:description  "ACDD Westernmost Longitude, Easternmost Longitude, Northernmost Latitude, Southernmost Latitude to schema:Dataset > schema:spatialCoverage(schema:Place) > schema:geo(schema:GeoShape) > schema:box"@en ;
-                    sh:path        schema:box ;
-                    sh:datatype    xsd:string ;
-                    sh:minCount    1 ;
-                    sh:maxCount    1 ;
-                    sh:severity     sh:Warning ;
-                    skos:closeMatch acdd:westernmost_longitude, acdd:easternmost_longitude, acdd:southernmost_latitude, acdd:northernmost_latitude ;
-                ] 
-            ] ;
+                    sh:path     schema:box ;
+                    sh:qualifiedMinCount 1 ;
+                    sh:qualifiedValueShape [
+                        sh:datatype xsd:string ;
+                        sh:minLength 1 ;
+                    ]
+                ]
+            ]
         ]
     ] ;
+    sh:message "[Recommended] Missing Bounding Box at schema:spatialCoverage(schema:Place) > schema:geo(schema:GeoShape) > schema:box"@en ;
     sh:severity     sh:Warning ;
     skos:closeMatch acdd:bounding_box .
+
 
 # --- start_time → schema:temporalCoverage  ----------------------
 
@@ -555,10 +608,12 @@ acdd:SchemaOrgStartTimePropertyShape
     sh:path         schema:temporalCoverage ;
     sh:name         "start_time to temporalCoverage" ;
     sh:description  "ACDD Start Time to schema:Dataset > schema:temporalCoverage."@en ;
-    sh:datatype     xsd:string ;
-    sh:minCount     1 ;
-    sh:maxCount     1 ;
-    sh:pattern      "^\\d{4}(-\\d{2}(-\\d{2}(T.*)?)?)?/(\\.\\.|\\d{4}(-\\d{2}(-\\d{2}(T.*)?)?)?)$" ;
+    sh:qualifiedMinCount 1 ;
+    sh:qualifiedValueShape [
+        sh:pattern      "^\\d{4}(-\\d{2}(-\\d{2}(T.*)?)?)?/(\\.\\.|\\d{4}(-\\d{2}(-\\d{2}(T.*)?)?)?)$" ;
+        sh:datatype     xsd:string ;
+    ] ;
+    sh:message "[Recommended] Missing Start Time at schema:temporalCoverage with pattern '^\\d{4}(-\\d{2}(-\\d{2}(T.*)?)?)?/(\\.\\.|\\d{4}(-\\d{2}(-\\d{2}(T.*)?)?)?)$'"@en ;
     sh:severity     sh:Warning ;
     skos:closeMatch acdd:start_time .
 
@@ -569,10 +624,12 @@ acdd:SchemaOrgEndTimePropertyShape
     sh:path         schema:temporalCoverage ;
     sh:name         "end_time to temporalCoverage" ;
     sh:description  "ACDD End Time to schema:Dataset > schema:temporalCoverage."@en ;
-    sh:datatype     xsd:string ;
-    sh:minCount     1 ;
-    sh:maxCount     1 ;
-    sh:pattern      "^(\\.\\.|\\d{4}(-\\d{2}(-\\d{2}(T.*)?)?)?)/\\d{4}(-\\d{2}(-\\d{2}(T.*)?)?)?$" ;
+    sh:qualifiedMinCount 1 ;
+    sh:qualifiedValueShape [
+        sh:pattern      "^((\\.\\.|\\d{4}(-\\d{2}(-\\d{2}(T.*)?)?)?))/\\d{4}(-\\d{2}(-\\d{2}(T.*)?)?)?$" ;
+        sh:datatype     xsd:string ;
+    ] ;
+    sh:message "[Recommended] Missing End Time at schema:temporalCoverage with pattern '^\\d{4}(-\\d{2}(-\\d{2}(T.*)?)?)?/(\\.\\.|\\d{4}(-\\d{2}(-\\d{2}(T.*)?)?)?)$'"@en ;
     sh:severity     sh:Warning ;
     skos:closeMatch acdd:end_time .
 
@@ -583,38 +640,39 @@ acdd:SchemaOrgVerticalMinimumPropertyShape
     sh:path         schema:spatialCoverage ;
     sh:name         "vertical_minimum to spatialCoverage > geo > additionalProperty > minValue" ;
     sh:description  "ACDD Vertical Minimum to schema:Dataset > schema:spatialCoverage(schema:Place) > schema:geo(schema:GeoShape) > schema:additionalProperty > schema:minValue"@en ;
-    sh:class        schema:Place ;
-    sh:node         [
-        a               sh:NodeShape ;
-        sh:targetClass  schema:Place ;
+    sh:qualifiedMinCount 1 ;
+    sh:qualifiedValueShape [
+        sh:class schema:Place ;
         sh:property [
             sh:path     schema:geo ;
-            sh:class    schema:GeoShape ;
-            sh:minCount 1 ;
-            sh:node     [
-                a               sh:NodeShape ;
-                sh:targetClass  schema:GeoShape ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedValueShape [
+                sh:class schema:GeoShape ;
                 sh:property [
                     sh:path     schema:additionalProperty ;
-                    sh:class    schema:PropertyValue ;
-                    sh:minCount 1 ;
-                    sh:property [
+                    sh:qualifiedMinCount 1 ;
+                    sh:qualifiedValueShape [
+                      sh:class    schema:PropertyValue ;
+                      sh:property [
                         sh:description "Some type of depth or elevation"@en ;
                         sh:path     schema:propertyID ;
                         sh:minCount 1 ;
                         sh:maxCount 1 ;
-                    ] ;
-                    sh:property [
+                      ] ;
+                      sh:property [
                         sh:path     schema:minValue ;
                         sh:minCount 1 ;
                         sh:maxCount 1 ;
-                    ]
-                ] ;
+                      ]
+                   ]
+                ]
             ]
         ]
-    ] ;
+    ] ;    
+    sh:message "[Recommended] Missing Vertical Minimum at schema:spatialCoverage(schema:Place) > schema:geo(schema:GeoShape) > schema:additionalProperty(schema:PropertyValue) > (schema:propertyID & schema:minValue)"@en ;
     sh:severity     sh:Warning ;
     skos:relatedMatch acdd:vertical_minimum .
+
 
 # --- vertical_maximum → schema:maxValue  ----------------------
 
@@ -623,36 +681,36 @@ acdd:SchemaOrgVerticalMaximumPropertyShape
     sh:path         schema:spatialCoverage ;
     sh:name         "vertical_maximum to spatialCoverage > geo > additionalProperty > maxValue" ;
     sh:description  "ACDD Vertical Maximum to schema:Dataset > schema:spatialCoverage(schema:Place) > schema:geo(schema:GeoShape) > schema:additionalProperty > schema:maxValue"@en ;
-    sh:class        schema:Place ;
-    sh:node         [
-        a               sh:NodeShape ;
-        sh:targetClass  schema:Place ;
+    sh:qualifiedMinCount 1 ;
+    sh:qualifiedValueShape [
+        sh:class schema:Place ;
         sh:property [
             sh:path     schema:geo ;
-            sh:class    schema:GeoShape ;
-            sh:minCount 1 ;
-            sh:node     [
-                a               sh:NodeShape ;
-                sh:targetClass  schema:GeoShape ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedValueShape [
+                sh:class schema:GeoShape ;
                 sh:property [
                     sh:path     schema:additionalProperty ;
-                    sh:class    schema:PropertyValue ;
-                    sh:minCount 1 ;
-                    sh:property [
+                    sh:qualifiedMinCount 1 ;
+                    sh:qualifiedValueShape [
+                      sh:class    schema:PropertyValue ;
+                      sh:property [
                         sh:description "Some type of depth or elevation"@en ;
                         sh:path     schema:propertyID ;
                         sh:minCount 1 ;
                         sh:maxCount 1 ;
-                    ] ;
-                    sh:property [
+                      ] ;
+                      sh:property [
                         sh:path     schema:maxValue ;
                         sh:minCount 1 ;
                         sh:maxCount 1 ;
-                    ]
-                ] ;
+                      ]
+                   ]
+                ]
             ]
         ]
-    ] ;
+    ] ;    
+    sh:message "[Recommended] Missing Vertical Maximum at schema:spatialCoverage(schema:Place) > schema:geo(schema:GeoShape) > schema:additionalProperty(schema:PropertyValue) > (schema:propertyID & schema:maxValue)"@en ;
     sh:severity     sh:Warning ;
     skos:relatedMatch acdd:vertical_maximum .
 
@@ -663,9 +721,12 @@ acdd:SchemaOrgTemporalExtentPropertyShape
     sh:path         schema:temporalCoverage ;
     sh:name         "temporal_extent to temporalCoverage" ;
     sh:description  "ACDD Temporal Extent to schema:Dataset > schema:temporalCoverage"@en ;
-    sh:datatype     xsd:string ;
-    sh:minCount     1 ;
-    sh:maxCount     1 ;
+    sh:qualifiedMinCount 1 ;
+    sh:qualifiedValueShape [
+        sh:datatype xsd:string ;
+        sh:minLength 1 ;
+    ] ;
+    sh:message "[Recommended] Missing Temporal Extent at schema:temporalCoverage"@en ;
     sh:severity     sh:Warning ;
     skos:exactMatch acdd:temporal_extent .
 
@@ -676,12 +737,16 @@ acdd:SchemaOrgTemporalResolutionPropertyShape
     sh:path         schema:additionalProperty ;
     sh:name         "temporal_resolution to additionalProperty" ;
     sh:description  "ACDD Temporal Resolution to schema:Dataset > schema:additionalProperty"@en ;
-    sh:class        schema:PropertyValue ;
-    sh:node [
-        a sh:NodeShape ;
-        sh:property [ sh:path schema:propertyID ; sh:hasValue "https://schema.acdd.dev/v1.0/temporal_resolution" ] ;
+    sh:qualifiedMinCount 1 ;
+    sh:qualifiedValueShape [
+        sh:class    schema:PropertyValue ;
+        sh:property [
+        sh:path     schema:propertyID ;
+        sh:hasValue "https://schema.acdd.dev/v1.3/temporal_resolution"
+        ] ;
         sh:property acdd:SchemaOrgValuePropertyShape ;
     ] ;
+    sh:message "[Recommended] Missing Temporal Resolution at schema:additionalProperty(schema:PropertyValue) with schema:propertyID = `https://schema.acdd.dev/v1.3/temporal_resolution` and schema:value set"@en ;
     sh:severity     sh:Warning ;
     skos:relatedMatch acdd:temporal_resolution .
 
@@ -692,12 +757,17 @@ acdd:SchemaOrgStandardNameVocabularyPropertyShape
     sh:path         schema:additionalProperty ;
     sh:name         "standard_name_vocabulary to additionalProperty" ;
     sh:description  "ACDD Standard Name Vocabulary to schema:Dataset > schema:additionalProperty"@en ;
-    sh:class        schema:PropertyValue ;
-    sh:node [
-        a sh:NodeShape ;
-        sh:property [ sh:path schema:propertyID ; sh:hasValue "https://schema.acdd.dev/v1.0/standard_name_vocabulary" ] ;
+    
+    sh:qualifiedMinCount 1 ;
+    sh:qualifiedValueShape [
+        sh:class    schema:PropertyValue ;
+        sh:property [
+        sh:path     schema:propertyID ;
+        sh:hasValue "https://schema.acdd.dev/v1.3/standard_name_vocabulary"
+        ] ;
         sh:property acdd:SchemaOrgValuePropertyShape ;
     ] ;
+    sh:message "[Recommended] Missing Standard Name Vocabulary at schema:additionalProperty(schema:PropertyValue) with schema:propertyID = `https://schema.acdd.dev/v1.3/standard_name_vocabulary` and schema:value set"@en ;
     sh:severity     sh:Warning ;
     skos:relatedMatch acdd:standard_name_vocabulary .
 
@@ -708,11 +778,18 @@ acdd:SchemaOrgResourceAccessConstraintsPropertyShape
     sh:path         schema:license ;
     sh:name         "resource_access_constraints" ;
     sh:description  "ACDD Resource Access Constraints to schema:Dataset > schema:license."@en ;
-    sh:or (
-        [ sh:datatype xsd:string ]
+    sh:qualifiedMinCount 1 ;
+    sh:qualifiedValueShape [
+      sh:or (
+        [ sh:datatype xsd:string ; sh:minLength 1; ]
         [ sh:datatype xsd:anyURI ]
-        [ sh:class    schema:CreativeWork ]
-    ) ;
+        [ 
+          sh:class    schema:CreativeWork ;
+          sh:property acdd:SchemaOrgNamePropertyShape ;
+        ]
+      ) ;
+    ] ;
+    sh:message "[Recommended] Missing Resource Access Constraints at schema:license"@en ;
     sh:severity     sh:Warning ;
     skos:broadMatch acdd:resource_access_constraints .
 
@@ -725,43 +802,78 @@ acdd:SchemaOrgResourceAccessConstraintsPropertyShape
 # --- contributor_name → schema:name ----------------------------------------------
 
 acdd:SchemaOrgContributorNamePropertyShape
-    a               sh:PropertyShape ;
-    sh:or (
-        [ sh:path   schema:creator ]
-        [ sh:path   schema:contributor ]
-    ) ;
     sh:name         "contributor_name to Dataset > creator or contributor > name" ;
     sh:description  "ACDD Contributor Name to schema:Dataset > (schema:creator or schema:contributor(schema:Person or schema:Organization)) > schema:name."@en ;
-    sh:or (
-        [ sh:class schema:Person ]
-        [ sh:class schema:Organization ]
-    ) ;
-    sh:node [
-        a           sh:NodeShape ;
-        sh:property acdd:SchemaOrgNamePropertyShape ;
+    
+    sh:property [
+        a               sh:PropertyShape ;
+        sh:path         [ sh:alternativePath ( schema:creator schema:contributor ) ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedValueShape [
+            sh:or (
+                [ sh:datatype xsd:string ; sh:minLength 1; ]
+                [
+                    sh:class schema:Person ;
+                    sh:property acdd:SchemaOrgNamePropertyShape ;
+                ]
+                [
+                    sh:class schema:Organization ;
+                    sh:property acdd:SchemaOrgNamePropertyShape ;
+                ]
+            )
+        ]
     ] ;
+    sh:message "[Suggested] Missing Contributor Name at either (schema:creator or schema:contributor) where the value is either a string or (schema:Person or schema:Organization) > schema:name"@en ;
     sh:severity     sh:Info ;
     skos:exactMatch acdd:contributor_name .
     
 # --- contributor_role → schema:roleName ----------------------------------------------
 
 acdd:SchemaOrgContributorRolePropertyShape
-    a               sh:PropertyShape ;
-    sh:or (
-        [ sh:path   schema:creator ]
-        [ sh:path   schema:contributor ]
-    ) ;
+    a               sh:NodeShape ;
     sh:name         "contributor_role to Dataset > creator or contributor > roleName" ;
     sh:description  "ACDD Contributor Role to schema:Dataset > (schema:creator or schema:contributor(schema:Role)) > schema:roleName."@en ;
-    sh:class schema:Role;
-    sh:node [
-        a               sh:NodeShape ;
-        sh:property [
-            sh:path     schema:roleName ;
-            sh:datatype xsd:string ;
-            sh:minCount 1 ;
+    sh:or (
+        [
+            sh:property [
+                a               sh:PropertyShape ;
+                sh:path         schema:creator ;
+                sh:qualifiedMinCount 1 ;
+                sh:qualifiedValueShape [
+                    sh:class schema:Role ;
+                    sh:property [
+                        sh:path     schema:roleName ;
+                        sh:datatype xsd:string ;
+                        sh:minCount 1 ;
+                    ] ;
+                    sh:property [
+                        sh:path     schema:creator ;
+                        sh:minCount 1 ;
+                    ]
+                ]
+            ]
         ]
-    ] ;
+        [
+            sh:property [
+                a               sh:PropertyShape ;
+                sh:path         schema:contributor ;
+                sh:qualifiedMinCount 1 ;
+                sh:qualifiedValueShape [
+                    sh:class schema:Role ;
+                    sh:property [
+                        sh:path     schema:roleName ;
+                        sh:datatype xsd:string ;
+                        sh:minCount 1 ;
+                    ] ;
+                    sh:property [
+                        sh:path     schema:contributor ;
+                        sh:minCount 1 ;
+                    ]
+                ]
+            ]
+        ]
+    ) ;
+    sh:message "[Suggested] Missing Contributor Role at either (schema:creator or schema:contributor) of type schema:Role > schema:roleName"@en ;
     sh:severity     sh:Info ;
     skos:exactMatch acdd:contributor_role .
 
@@ -772,14 +884,15 @@ acdd:SchemaOrgPublisherPropertyShape
     sh:path         schema:publisher ;
     sh:name         "publisher to publisher > name" ;
     sh:description  "ACDD Publisher to schema:Dataset > schema:publisher > schema:name."@en ;
-    sh:or (
+    sh:qualifiedMinCount 1 ;
+    sh:qualifiedValueShape [
+      sh:or (
         [ sh:class  schema:Organization ]
         [ sh:class  schema:Person ]
-    );
-    sh:node [
-        a           sh:NodeShape ;
-        sh:property acdd:SchemaOrgNamePropertyShape ;
+      ) ;
+      sh:property acdd:SchemaOrgNamePropertyShape
     ] ;
+    sh:message "[Suggested] Missing Publisher at schema:publisher (schema:Person or schema:Organization) > schema:name"@en ;
     sh:severity     sh:Info ;
     skos:exactMatch acdd:publisher .
 
@@ -790,28 +903,58 @@ acdd:SchemaOrgPublisherUrlPropertyShape
     sh:path         schema:publisher ;
     sh:name         "publisher_url to publisher > url" ;
     sh:description  "ACDD Publisher URL to schema:Dataset > schema:publisher > schema:url."@en ;
-    sh:or (
-        [ sh:class  schema:Organization ]
-        [ sh:class  schema:Person ]
-    );
-    sh:node         [
-        a   sh:NodeShape ;
-        sh:property acdd:SchemaOrgUrlPropertyShape ;
+    sh:qualifiedMinCount     1 ;
+    sh:qualifiedValueShape [
+      sh:or (
+        [
+            sh:class schema:Organization ;
+            sh:node [
+                a sh:NodeShape ;
+                sh:property acdd:SchemaOrgUrlPropertyShape
+            ]
+        ]
+        [
+            sh:class schema:Person ;
+            sh:node [
+                a sh:NodeShape ;
+                sh:property acdd:SchemaOrgUrlPropertyShape
+            ]
+        ]
+      ) 
     ] ;
+    sh:message "[Suggested] Missing Publisher URL at schema:publisher (schema:Person or schema:Organization) > schema:url"@en ;
     sh:severity     sh:Info ;
     skos:exactMatch acdd:publisher_url .
 
 # --- publisher_email → schema:publisher ----------------------------------------------
+
+
+
 
 acdd:SchemaOrgPublisherEmailPropertyShape
     a               sh:PropertyShape ;
     sh:path         schema:publisher ;
     sh:name         "publisher_email to publisher > email" ;
     sh:description  "ACDD Publisher E-Mail to schema:Dataset > schema:publisher > schema:email."@en ;
-    sh:or (
-        [ sh:class  schema:Organization ]
-        [ sh:class  schema:Person ]
-    );
-    sh:node         acdd:SchemaOrgEmailPropertyShape ;
+    sh:qualifiedMinCount     1 ;
+    sh:qualifiedValueShape [
+      sh:or (
+        [
+            sh:class schema:Organization ;
+            sh:node [
+                a sh:NodeShape ;
+                sh:property acdd:SchemaOrgEmailPropertyShape
+            ]
+        ]
+        [
+            sh:class schema:Person ;
+            sh:node [
+                a sh:NodeShape ;
+                sh:property acdd:SchemaOrgEmailPropertyShape
+            ]
+        ]
+      ) 
+    ] ;
+    sh:message "[Suggested] Missing Publisher E-Mail at schema:publisher (schema:Person or schema:Organization) > schema:email"@en ;
     sh:severity     sh:Info ;
     skos:exactMatch acdd:publisher_email .
