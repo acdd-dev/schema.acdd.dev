@@ -768,7 +768,7 @@ xsd:date rdf:type rdfs:Datatype .
                                     :RecommendationLevel ;
                            <http://purl.org/dc/terms/subject> "Dataset" ;
                            rdfs:comment "Attributes that are highly recommended by the ACDD."@en ;
-                           rdfs:label "Highly Recommended"@en .
+                           rdfs:label "Highly Recommended Dataset Attribute"@en .
 
 
 ###  https://schema.acdd.dev/v1.3/Dataset_Recommended
@@ -776,7 +776,7 @@ xsd:date rdf:type rdfs:Datatype .
                               :RecommendationLevel ;
                      <http://purl.org/dc/terms/subject> "Dataset" ;
                      rdfs:comment "Attributes that are recommended by the ACDD."@en ;
-                     rdfs:label "Recommended"@en .
+                     rdfs:label "Recommended Dataset Attribute"@en .
 
 
 ###  https://schema.acdd.dev/v1.3/Dataset_Suggested
@@ -784,7 +784,7 @@ xsd:date rdf:type rdfs:Datatype .
                             :RecommendationLevel ;
                    <http://purl.org/dc/terms/subject> "Dataset" ;
                    rdfs:comment "Attributes that are suggested by the ACDD."@en ;
-                   rdfs:label "Suggested"@en .
+                   rdfs:label "Suggested Dataset Attribute"@en .
 
 
 ###  https://schema.acdd.dev/v1.3/Variable_HighlyRecommended

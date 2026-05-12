@@ -141,7 +141,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Highly Recommended"
+    "@value" : "Highly Recommended Dataset Attribute"
   } ]
 }, {
   "@id" : "https://schema.acdd.dev/v1.3/Dataset_Recommended",
@@ -158,7 +158,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Recommended"
+    "@value" : "Recommended Dataset Attribute"
   } ]
 }, {
   "@id" : "https://schema.acdd.dev/v1.3/Dataset_Suggested",
@@ -175,7 +175,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Suggested"
+    "@value" : "Suggested Dataset Attribute"
   } ]
 }, {
   "@id" : "https://schema.acdd.dev/v1.3/RecommendationLevel",

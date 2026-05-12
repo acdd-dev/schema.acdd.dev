@@ -767,7 +767,7 @@ acdd:Dataset_HighlyRecommended rdf:type owl:NamedIndividual ,
                                         acdd:RecommendationLevel ;
                                dct:subject "Dataset" ;
                                rdfs:comment "Attributes that are highly recommended by the ACDD."@en ;
-                               rdfs:label "Highly Recommended"@en .
+                               rdfs:label "Highly Recommended Dataset Attribute"@en .
 
 
 ###  https://schema.acdd.dev/v1.3/Dataset_Recommended
@@ -775,7 +775,7 @@ acdd:Dataset_Recommended rdf:type owl:NamedIndividual ,
                                   acdd:RecommendationLevel ;
                          dct:subject "Dataset" ;
                          rdfs:comment "Attributes that are recommended by the ACDD."@en ;
-                         rdfs:label "Recommended"@en .
+                         rdfs:label "Recommended Dataset Attribute"@en .
 
 
 ###  https://schema.acdd.dev/v1.3/Dataset_Suggested
@@ -783,7 +783,7 @@ acdd:Dataset_Suggested rdf:type owl:NamedIndividual ,
                                 acdd:RecommendationLevel ;
                        dct:subject "Dataset" ;
                        rdfs:comment "Attributes that are suggested by the ACDD."@en ;
-                       rdfs:label "Suggested"@en .
+                       rdfs:label "Suggested Dataset Attribute"@en .
 
 
 ###  https://schema.acdd.dev/v1.3/Variable_HighlyRecommended

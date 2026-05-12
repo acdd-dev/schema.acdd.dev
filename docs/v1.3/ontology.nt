@@ -731,21 +731,21 @@ _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://schema.acdd.dev/v1.3/Dataset_HighlyRecommended> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.acdd.dev/v1.3/RecommendationLevel> .
 <https://schema.acdd.dev/v1.3/Dataset_HighlyRecommended> <http://purl.org/dc/terms/subject> "Dataset" .
 <https://schema.acdd.dev/v1.3/Dataset_HighlyRecommended> <http://www.w3.org/2000/01/rdf-schema#comment> "Attributes that are highly recommended by the ACDD."@en .
-<https://schema.acdd.dev/v1.3/Dataset_HighlyRecommended> <http://www.w3.org/2000/01/rdf-schema#label> "Highly Recommended"@en .
+<https://schema.acdd.dev/v1.3/Dataset_HighlyRecommended> <http://www.w3.org/2000/01/rdf-schema#label> "Highly Recommended Dataset Attribute"@en .
 # 
 # https://schema.acdd.dev/v1.3/Dataset_Recommended
 <https://schema.acdd.dev/v1.3/Dataset_Recommended> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://schema.acdd.dev/v1.3/Dataset_Recommended> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.acdd.dev/v1.3/RecommendationLevel> .
 <https://schema.acdd.dev/v1.3/Dataset_Recommended> <http://purl.org/dc/terms/subject> "Dataset" .
 <https://schema.acdd.dev/v1.3/Dataset_Recommended> <http://www.w3.org/2000/01/rdf-schema#comment> "Attributes that are recommended by the ACDD."@en .
-<https://schema.acdd.dev/v1.3/Dataset_Recommended> <http://www.w3.org/2000/01/rdf-schema#label> "Recommended"@en .
+<https://schema.acdd.dev/v1.3/Dataset_Recommended> <http://www.w3.org/2000/01/rdf-schema#label> "Recommended Dataset Attribute"@en .
 # 
 # https://schema.acdd.dev/v1.3/Dataset_Suggested
 <https://schema.acdd.dev/v1.3/Dataset_Suggested> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://schema.acdd.dev/v1.3/Dataset_Suggested> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.acdd.dev/v1.3/RecommendationLevel> .
 <https://schema.acdd.dev/v1.3/Dataset_Suggested> <http://purl.org/dc/terms/subject> "Dataset" .
 <https://schema.acdd.dev/v1.3/Dataset_Suggested> <http://www.w3.org/2000/01/rdf-schema#comment> "Attributes that are suggested by the ACDD."@en .
-<https://schema.acdd.dev/v1.3/Dataset_Suggested> <http://www.w3.org/2000/01/rdf-schema#label> "Suggested"@en .
+<https://schema.acdd.dev/v1.3/Dataset_Suggested> <http://www.w3.org/2000/01/rdf-schema#label> "Suggested Dataset Attribute"@en .
 # 
 # https://schema.acdd.dev/v1.3/Variable_HighlyRecommended
 <https://schema.acdd.dev/v1.3/Variable_HighlyRecommended> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .

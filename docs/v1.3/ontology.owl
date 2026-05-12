@@ -1132,7 +1132,7 @@
         <rdf:type rdf:resource="https://schema.acdd.dev/v1.3/RecommendationLevel"/>
         <terms:subject>Dataset</terms:subject>
         <rdfs:comment xml:lang="en">Attributes that are highly recommended by the ACDD.</rdfs:comment>
-        <rdfs:label xml:lang="en">Highly Recommended</rdfs:label>
+        <rdfs:label xml:lang="en">Highly Recommended Dataset Attribute</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1144,7 +1144,7 @@
         <rdf:type rdf:resource="https://schema.acdd.dev/v1.3/RecommendationLevel"/>
         <terms:subject>Dataset</terms:subject>
         <rdfs:comment xml:lang="en">Attributes that are recommended by the ACDD.</rdfs:comment>
-        <rdfs:label xml:lang="en">Recommended</rdfs:label>
+        <rdfs:label xml:lang="en">Recommended Dataset Attribute</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1156,7 +1156,7 @@
         <rdf:type rdf:resource="https://schema.acdd.dev/v1.3/RecommendationLevel"/>
         <terms:subject>Dataset</terms:subject>
         <rdfs:comment xml:lang="en">Attributes that are suggested by the ACDD.</rdfs:comment>
-        <rdfs:label xml:lang="en">Suggested</rdfs:label>
+        <rdfs:label xml:lang="en">Suggested Dataset Attribute</rdfs:label>
     </owl:NamedIndividual>
     
 
