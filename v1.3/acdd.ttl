@@ -475,7 +475,7 @@ acdd:keywords rdf:type owl:DatatypeProperty ;
               rdfs:range xsd:string ;
               dct:source <https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#keywords> ;
               rdfs:comment "A comma-separated list of key words and/or phrases. Keywords may be common words or phrases, terms from a controlled vocabulary (GCMD is often used), or URIs for terms from a controlled vocabulary (see also \"keywords_vocabulary\" attribute)."@en ;
-              rdfs:label "Keyword"@en ;
+              rdfs:label "keywords"@en ;
               rdfs:seeAlso acdd:keywords_vocabulary ;
               acdd:recommendationLevel acdd:Dataset_HighlyRecommended .
 
@@ -685,7 +685,7 @@ acdd:summary rdf:type owl:DatatypeProperty ;
              rdfs:range xsd:string ;
              dct:source <https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#summary> ;
              rdfs:comment "A paragraph describing the dataset, analogous to an abstract for a paper."@en ;
-             rdfs:label "Summary"@en ;
+             rdfs:label "summary"@en ;
              acdd:recommendationLevel acdd:Dataset_HighlyRecommended .
 
 
