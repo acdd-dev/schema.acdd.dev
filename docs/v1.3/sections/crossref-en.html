@@ -9,7 +9,7 @@ This section provides details for each class and property defined by Attribute C
   <h3>Recommendation Level<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/RecommendationLevel</p>
   <div class="comment">
-   <span class="markdown">The level of recommendation for an ACDD attribute: Highly Recommended, Recommended, or Suggested.</span>
+   <span class="markdown">The level of recommendation for an ACDD attribute for a given subject: Dataset or Variable.</span>
   </div>
   <dl class="description">
    <dt>
@@ -22,78 +22,93 @@ This section provides details for each class and property defined by Attribute C
     has members
    </dt>
    <dd>
-    <a href="#HighlyRecommended" title="https://schema.acdd.dev/v1.3/HighlyRecommended">Highly Recommended</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Recommended" title="https://schema.acdd.dev/v1.3/Recommended">Recommended</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Suggested" title="https://schema.acdd.dev/v1.3/Suggested">Suggested</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#Dataset_HighlyRecommended" title="https://schema.acdd.dev/v1.3/Dataset_HighlyRecommended">Highly Recommended</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Variable_HighlyRecommended" title="https://schema.acdd.dev/v1.3/Variable_HighlyRecommended">Highly Recommended Variable Attribute</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Dataset_Recommended" title="https://schema.acdd.dev/v1.3/Dataset_Recommended">Recommended</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Dataset_Suggested" title="https://schema.acdd.dev/v1.3/Dataset_Suggested">Suggested</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
  </div>
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
  <h3 id="dataproperties-headline" class="list">Data Properties</h3>
  <ul class="hlist">
-  <li><a href="#abstract" title="https://schema.acdd.dev/v1.3/abstract">Abstract</a></li>
-  <li><a href="#acknowledgement" title="https://schema.acdd.dev/v1.3/acknowledgement">Acknowledgement</a></li>
-  <li><a href="#author_originator_email_address" title="https://schema.acdd.dev/v1.3/author_originator_email_address">Author / Originator Email Address</a></li>
-  <li><a href="#author_originator_www_address" title="https://schema.acdd.dev/v1.3/author_originator_www_address">Author / Originator World Wide Web Address</a></li>
-  <li><a href="#bounding_box" title="https://schema.acdd.dev/v1.3/bounding_box">Bounding Box</a></li>
-  <li><a href="#common_data_model_datatype" title="https://schema.acdd.dev/v1.3/common_data_model_datatype">Common Data Model Datatype</a></li>
-  <li><a href="#contributor_name" title="https://schema.acdd.dev/v1.3/contributor_name">Contributor Name</a></li>
-  <li><a href="#contributor_role" title="https://schema.acdd.dev/v1.3/contributor_role">Contributor Role</a></li>
-  <li><a href="#easternmost_longitude" title="https://schema.acdd.dev/v1.3/easternmost_longitude">Easternmost Longitude</a></li>
-  <li><a href="#end_time" title="https://schema.acdd.dev/v1.3/end_time">End Time</a></li>
-  <li><a href="#keyword" title="https://schema.acdd.dev/v1.3/keyword">Keyword</a></li>
-  <li><a href="#keyword_vocabulary" title="https://schema.acdd.dev/v1.3/keyword_vocabulary">Keyword Vocabulary</a></li>
-  <li><a href="#lineage_statement" title="https://schema.acdd.dev/v1.3/lineage_statement">Lineage Statement</a></li>
-  <li><a href="#naming_authority" title="https://schema.acdd.dev/v1.3/naming_authority">Naming Authority</a></li>
-  <li><a href="#northernmost_latitude" title="https://schema.acdd.dev/v1.3/northernmost_latitude">Northernmost Latitude</a></li>
-  <li><a href="#originating_organization" title="https://schema.acdd.dev/v1.3/originating_organization">Originating Organization</a></li>
+  <li><a href="#acknowledgement" title="https://schema.acdd.dev/v1.3/acknowledgement">acknowledgement</a></li>
+  <li><a href="#cdm_data_type" title="https://schema.acdd.dev/v1.3/cdm_data_type">cdm_data_type</a></li>
+  <li><a href="#comment" title="https://schema.acdd.dev/v1.3/comment">comment</a></li>
+  <li><a href="#contributor_name" title="https://schema.acdd.dev/v1.3/contributor_name">contributor_name</a></li>
+  <li><a href="#contributor_role" title="https://schema.acdd.dev/v1.3/contributor_role">contributor_role</a></li>
+  <li><a href="#conventions" title="https://schema.acdd.dev/v1.3/conventions">Conventions</a></li>
+  <li><a href="#coverage_content_type" title="https://schema.acdd.dev/v1.3/coverage_content_type">coverage_content_type</a></li>
+  <li><a href="#creator_email" title="https://schema.acdd.dev/v1.3/creator_email">creator_email</a></li>
+  <li><a href="#creator_institution" title="https://schema.acdd.dev/v1.3/creator_institution">creator_institution</a></li>
+  <li><a href="#creator_name" title="https://schema.acdd.dev/v1.3/creator_name">creator_name</a></li>
+  <li><a href="#creator_type" title="https://schema.acdd.dev/v1.3/creator_type">creator_type</a></li>
+  <li><a href="#creator_url" title="https://schema.acdd.dev/v1.3/creator_url">creator_url</a></li>
+  <li><a href="#date_created" title="https://schema.acdd.dev/v1.3/date_created">date_created</a></li>
+  <li><a href="#date_issued" title="https://schema.acdd.dev/v1.3/date_issued">date_issued</a></li>
+  <li><a href="#date_metadata_modified" title="https://schema.acdd.dev/v1.3/date_metadata_modified">date_metadata_modified</a></li>
+  <li><a href="#date_modified" title="https://schema.acdd.dev/v1.3/date_modified">date_modified</a></li>
+  <li><a href="#geospatial_bounds" title="https://schema.acdd.dev/v1.3/geospatial_bounds">geospatial_bounds</a></li>
+  <li><a href="#geospatial_bounds_crs" title="https://schema.acdd.dev/v1.3/geospatial_bounds_crs">geospatial_bounds_crs</a></li>
+  <li><a href="#geospatial_bounds_vertical_crs" title="https://schema.acdd.dev/v1.3/geospatial_bounds_vertical_crs">geospatial_bounds_vertical_crs</a></li>
+  <li><a href="#geospatial_lat_max" title="https://schema.acdd.dev/v1.3/geospatial_lat_max">geospatial_lat_max</a></li>
+  <li><a href="#geospatial_lat_min" title="https://schema.acdd.dev/v1.3/geospatial_lat_min">geospatial_lat_min</a></li>
+  <li><a href="#geospatial_lat_resolution" title="https://schema.acdd.dev/v1.3/geospatial_lat_resolution">geospatial_lat_resolution</a></li>
+  <li><a href="#geospatial_lat_units" title="https://schema.acdd.dev/v1.3/geospatial_lat_units">geospatial_lat_units</a></li>
+  <li><a href="#geospatial_lon_max" title="https://schema.acdd.dev/v1.3/geospatial_lon_max">geospatial_lon_max</a></li>
+  <li><a href="#geospatial_lon_min" title="https://schema.acdd.dev/v1.3/geospatial_lon_min">geospatial_lon_min</a></li>
+  <li><a href="#geospatial_lon_resolution" title="https://schema.acdd.dev/v1.3/geospatial_lon_resolution">geospatial_lon_resolution</a></li>
+  <li><a href="#geospatial_lon_units" title="https://schema.acdd.dev/v1.3/geospatial_lon_units">geospatial_lon_units</a></li>
+  <li><a href="#geospatial_vertical_max" title="https://schema.acdd.dev/v1.3/geospatial_vertical_max">geospatial_vertical_max</a></li>
+  <li><a href="#geospatial_vertical_min" title="https://schema.acdd.dev/v1.3/geospatial_vertical_min">geospatial_vertical_min</a></li>
+  <li><a href="#geospatial_vertical_positive" title="https://schema.acdd.dev/v1.3/geospatial_vertical_positive">geospatial_vertical_positive</a></li>
+  <li><a href="#geospatial_vertical_resolution" title="https://schema.acdd.dev/v1.3/geospatial_vertical_resolution">geospatial_vertical_resolution</a></li>
+  <li><a href="#geospatial_vertical_units" title="https://schema.acdd.dev/v1.3/geospatial_vertical_units">geospatial_vertical_units</a></li>
+  <li><a href="#history" title="https://schema.acdd.dev/v1.3/history">history</a></li>
+  <li><a href="#id" title="https://schema.acdd.dev/v1.3/id">id</a></li>
+  <li><a href="#institution" title="https://schema.acdd.dev/v1.3/institution">institution</a></li>
+  <li><a href="#instrument" title="https://schema.acdd.dev/v1.3/instrument">instrument</a></li>
+  <li><a href="#instrument_vocabulary" title="https://schema.acdd.dev/v1.3/instrument_vocabulary">instrument_vocabulary</a></li>
+  <li><a href="#keywords" title="https://schema.acdd.dev/v1.3/keywords">Keyword</a></li>
+  <li><a href="#keywords_vocabulary" title="https://schema.acdd.dev/v1.3/keywords_vocabulary">keywords_vocabulary</a></li>
+  <li><a href="#license" title="https://schema.acdd.dev/v1.3/license">license</a></li>
+  <li><a href="#long_name" title="https://schema.acdd.dev/v1.3/long_name">long_name</a></li>
+  <li><a href="#metadata_link" title="https://schema.acdd.dev/v1.3/metadata_link">metadata_link</a></li>
+  <li><a href="#naming_authority" title="https://schema.acdd.dev/v1.3/naming_authority">naming_authority</a></li>
+  <li><a href="#platform" title="https://schema.acdd.dev/v1.3/platform">platform</a></li>
+  <li><a href="#platform_vocabulary" title="https://schema.acdd.dev/v1.3/platform_vocabulary">platform_vocabulary</a></li>
   <li><a href="#processing_level" title="https://schema.acdd.dev/v1.3/processing_level">Processing Level</a></li>
-  <li><a href="#project_name" title="https://schema.acdd.dev/v1.3/project_name">Project Name</a></li>
-  <li><a href="#publisher" title="https://schema.acdd.dev/v1.3/publisher">Publisher</a></li>
-  <li><a href="#publisher_email" title="https://schema.acdd.dev/v1.3/publisher_email">Publisher E-Mail</a></li>
-  <li><a href="#publisher_url" title="https://schema.acdd.dev/v1.3/publisher_url">Publisher URL</a></li>
-  <li><a href="#resource_access_constraints" title="https://schema.acdd.dev/v1.3/resource_access_constraints">Resource Access Constraints</a></li>
-  <li><a href="#resource_contact" title="https://schema.acdd.dev/v1.3/resource_contact">Resource Contact</a></li>
-  <li><a href="#resource_creation-revision_date" title="https://schema.acdd.dev/v1.3/resource_creation-revision_date">Resource Creation/Revision Date</a></li>
-  <li><a href="#resource_identifier" title="https://schema.acdd.dev/v1.3/resource_identifier">Resource Identifier</a></li>
-  <li><a href="#resource_title" title="https://schema.acdd.dev/v1.3/resource_title">Resource Title</a></li>
-  <li><a href="#southernmost_latitude" title="https://schema.acdd.dev/v1.3/southernmost_latitude">Southernmost Latitude</a></li>
-  <li><a href="#standard_name_vocabulary" title="https://schema.acdd.dev/v1.3/standard_name_vocabulary">Standard Name Vocabulary</a></li>
-  <li><a href="#start_time" title="https://schema.acdd.dev/v1.3/start_time">Start Time</a></li>
-  <li><a href="#supplemental_information" title="https://schema.acdd.dev/v1.3/supplemental_information">Supplemental Information</a></li>
-  <li><a href="#temporal_extent" title="https://schema.acdd.dev/v1.3/temporal_extent">Temporal Extent</a></li>
-  <li><a href="#temporal_resolution" title="https://schema.acdd.dev/v1.3/temporal_resolution">Temporal Resolution</a></li>
-  <li><a href="#vertical_maximum" title="https://schema.acdd.dev/v1.3/vertical_maximum">Vertical Maximum</a></li>
-  <li><a href="#vertical_minimum" title="https://schema.acdd.dev/v1.3/vertical_minimum">Vertical Minimum</a></li>
-  <li><a href="#westernmost_longitude" title="https://schema.acdd.dev/v1.3/westernmost_longitude">Westernmost Longitude</a></li>
+  <li><a href="#product_version" title="https://schema.acdd.dev/v1.3/product_version">product_version</a></li>
+  <li><a href="#program" title="https://schema.acdd.dev/v1.3/program">program</a></li>
+  <li><a href="#project" title="https://schema.acdd.dev/v1.3/project">project</a></li>
+  <li><a href="#publisher_email" title="https://schema.acdd.dev/v1.3/publisher_email">publisher_email</a></li>
+  <li><a href="#publisher_institution" title="https://schema.acdd.dev/v1.3/publisher_institution">publisher_institution</a></li>
+  <li><a href="#publisher_name" title="https://schema.acdd.dev/v1.3/publisher_name">publisher_name</a></li>
+  <li><a href="#publisher_type" title="https://schema.acdd.dev/v1.3/publisher_type">publisher_type</a></li>
+  <li><a href="#publisher_url" title="https://schema.acdd.dev/v1.3/publisher_url">publisher_url</a></li>
+  <li><a href="#references" title="https://schema.acdd.dev/v1.3/references">references</a></li>
+  <li><a href="#source" title="https://schema.acdd.dev/v1.3/source">source</a></li>
+  <li><a href="#standard_name" title="https://schema.acdd.dev/v1.3/standard_name">standard_name</a></li>
+  <li><a href="#standard_name_vocabulary" title="https://schema.acdd.dev/v1.3/standard_name_vocabulary">standard_name_vocabulary</a></li>
+  <li><a href="#summary" title="https://schema.acdd.dev/v1.3/summary">Summary</a></li>
+  <li><a href="#time_coverage_duration" title="https://schema.acdd.dev/v1.3/time_coverage_duration">time_coverage_duration</a></li>
+  <li><a href="#time_coverage_end" title="https://schema.acdd.dev/v1.3/time_coverage_end">time_coverage_end</a></li>
+  <li><a href="#time_coverage_resolution" title="https://schema.acdd.dev/v1.3/time_coverage_resolution">time_coverage_resolution</a></li>
+  <li><a href="#time_coverage_start" title="https://schema.acdd.dev/v1.3/time_coverage_start">time_coverage_start</a></li>
+  <li><a href="#title" title="https://schema.acdd.dev/v1.3/title">title</a></li>
+  <li><a href="#units" title="https://schema.acdd.dev/v1.3/units">units</a></li>
  </ul>
- <div class="entity" id="abstract">
-  <h3>Abstract<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/abstract</p>
-  <div class="comment">
-   <span class="markdown">A paragraph describing the resource. Also referred to as 'Description' in Catalog Services for the Web.</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
-    </dd>
-   </dl>
-  </div>
- </div>
  <div class="entity" id="acknowledgement">
-  <h3>Acknowledgement<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <h3>acknowledgement<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/acknowledgement</p>
   <div class="comment">
-   <span class="markdown">Provides a place to acknowledge various types of support for the project that produced the data.</span>
+   <span class="markdown">A place to acknowledge various types of support for the project that produced this data.</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#acknowledgement">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#acknowledgement</a>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -111,12 +126,20 @@ This section provides details for each class and property defined by Attribute C
    </dl>
   </div>
  </div>
- <div class="entity" id="author_originator_email_address">
-  <h3>Author / Originator Email Address<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/author_originator_email_address</p>
+ <div class="entity" id="cdm_data_type">
+  <h3>cdm_data_type<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/cdm_data_type</p>
   <div class="comment">
-   <span class="markdown">The electronic mail address of the principal author of the resource.</span>
+   <span class="markdown">The data type, as derived from Unidata's Common Data Model Scientific Data types and understood by THREDDS. (This is a THREDDS "dataType", and is different from the CF NetCDF attribute 'featureType', which indicates a Discrete Sampling Geometry file in CF.)</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#cdm_data_type">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#cdm_data_type</a>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -134,58 +157,20 @@ This section provides details for each class and property defined by Attribute C
    </dl>
   </div>
  </div>
- <div class="entity" id="author_originator_www_address">
-  <h3>Author / Originator World Wide Web Address<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/author_originator_www_address</p>
+ <div class="entity" id="comment">
+  <h3>comment<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/comment</p>
   <div class="comment">
-   <span class="markdown">The World Wide Web address of the principal author of the cited resource.</span>
+   <span class="markdown">Miscellaneous information about the data, not captured elsewhere. This attribute is defined in the CF Conventions.</span>
   </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#anyURI" target="_blank" title="http://www.w3.org/2001/XMLSchema#anyURI">any U R I</a>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="bounding_box">
-  <h3>Bounding Box<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/bounding_box</p>
-  <div class="comment">
-   <span class="markdown">A bounding box for identifying a geographic area of interest. Note: This concept is called "Coverage" in the CSW Specification.</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="common_data_model_datatype">
-  <h3>Common Data Model Datatype<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/common_data_model_datatype</p>
-  <div class="comment">
-   <span class="markdown">The THREDDS data type for this resource. Current values: vector, grid, textTable, tin, stereoModel, video.</span>
-  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#comment">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#comment</a>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -204,11 +189,19 @@ This section provides details for each class and property defined by Attribute C
   </div>
  </div>
  <div class="entity" id="contributor_name">
-  <h3>Contributor Name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <h3>contributor_name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/contributor_name</p>
   <div class="comment">
-   <span class="markdown">The name of a contributor to the resource.</span>
+   <span class="markdown">The name of any individuals, projects, or institutions that contributed to the creation of this data. May be presented as free text, or in a structured format compatible with conversion to ncML (e.g., insensitive to changes in whitespace, including end-of-line characters).</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#contributor_name">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#contributor_name</a>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -227,11 +220,19 @@ This section provides details for each class and property defined by Attribute C
   </div>
  </div>
  <div class="entity" id="contributor_role">
-  <h3>Contributor Role<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <h3>contributor_role<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/contributor_role</p>
   <div class="comment">
-   <span class="markdown">The role of any individuals or institutions that contributed to the creation of the data.</span>
+   <span class="markdown">The role of any individuals, projects, or institutions that contributed to the creation of this data. May be presented as free text, or in a structured format compatible with conversion to ncML (e.g., insensitive to changes in whitespace, including end-of-line characters). Multiple roles should be presented in the same order and number as the names in contributor_names.</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#contributor_role">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#contributor_role</a>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -249,12 +250,562 @@ This section provides details for each class and property defined by Attribute C
    </dl>
   </div>
  </div>
- <div class="entity" id="easternmost_longitude">
-  <h3>Easternmost Longitude<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/easternmost_longitude</p>
+ <div class="entity" id="conventions">
+  <h3>Conventions<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/conventions</p>
   <div class="comment">
-   <span class="markdown">The easternmost longitude of the bounding rectangle.</span>
+   <span class="markdown">A comma-separated list of the conventions that are followed by the dataset. For files that follow this version of ACDD, include the string 'ACDD-1.3'. </span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#keywords">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#keywords</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="coverage_content_type">
+  <h3>coverage_content_type<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/coverage_content_type</p>
+  <div class="comment">
+   <span class="markdown">An ISO 19115-1 code to indicate the source of the data (image, thematicClassification, physicalMeasurement, auxiliaryInformation, qualityInformation, referenceInformation, modelResult, or coordinate).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#coverage_content_type">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#coverage_content_type</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="creator_email">
+  <h3>creator_email<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/creator_email</p>
+  <div class="comment">
+   <span class="markdown">The email address of the person (or other creator type specified by the creator_type attribute) principally responsible for creating this data.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#creator_email">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#creator_email</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="creator_institution">
+  <h3>creator_institution<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/creator_institution</p>
+  <div class="comment">
+   <span class="markdown">The institution of the creator; should uniquely identify the creator's institution. This attribute's value should be specified even if it matches the value of publisher_institution, or if creator_type is institution.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#creator_institution">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#creator_institution</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="creator_name">
+  <h3>creator_name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/creator_name</p>
+  <div class="comment">
+   <span class="markdown">The name of the person (or other creator type specified by the creator_type attribute) principally responsible for creating this data.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#creator_name">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#creator_name</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="creator_type">
+  <h3>creator_type<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/creator_type</p>
+  <div class="comment">
+   <span class="markdown">Specifies type of creator with one of the following: 'person', 'group', 'institution', or 'position'. If this attribute is not specified, the creator is assumed to be a person.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#creator_type">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#creator_type</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="creator_url">
+  <h3>creator_url<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/creator_url</p>
+  <div class="comment">
+   <span class="markdown">The URL of the person (or other creator type specified by the creator_type attribute) principally responsible for creating this data.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#creator_url">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#creator_url</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#anyURI" target="_blank" title="http://www.w3.org/2001/XMLSchema#anyURI">any U R I</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="date_created">
+  <h3>date_created<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/date_created</p>
+  <div class="comment">
+   <span class="markdown">The date on which this version of the data was created. (Modification of values implies a new version, hence this would be assigned the date of the most recent values modification.) Metadata changes are not considered when assigning the date_created. The ISO 8601:2004 extended date format is recommended, as described in the Attribute Content Guidance section.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#date_created">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#date_created</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a> <span class="logic">or</span> <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="date_issued">
+  <h3>date_issued<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/date_issued</p>
+  <div class="comment">
+   <span class="markdown">The date on which this data (including all modifications) was formally issued (i.e., made available to a wider audience). Note that these apply just to the data, not the metadata. The ISO 8601:2004 extended date format is recommended, as described in the Attributes Content Guidance section.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#date_issued">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#date_issued</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a> <span class="logic">or</span> <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="date_metadata_modified">
+  <h3>date_metadata_modified<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/date_metadata_modified</p>
+  <div class="comment">
+   <span class="markdown">The date on which the metadata was last modified. The ISO 8601:2004 extended date format is recommended, as described in the Attributes Content Guidance section.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#date_metadata_modified">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#date_metadata_modified</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a> <span class="logic">or</span> <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="date_modified">
+  <h3>date_modified<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/date_modified</p>
+  <div class="comment">
+   <span class="markdown">The date on which the data was last modified. Note that this applies just to the data, not the metadata. The ISO 8601:2004 extended date format is recommended, as described in the Attributes Content Guidance section.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#date_modified">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#date_modified</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a> <span class="logic">or</span> <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="geospatial_bounds">
+  <h3>geospatial_bounds<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/geospatial_bounds</p>
+  <div class="comment">
+   <span class="markdown">Describes the data's 2D or 3D geospatial extent in OGC's Well-Known Text (WKT) Geometry format (reference the OGC Simple Feature Access (SFA) specification). The meaning and order of values for each point's coordinates depends on the coordinate reference system (CRS). The ACDD default is 2D geometry in the EPSG:4326 coordinate reference system. The default may be overridden with geospatial_bounds_crs and geospatial_bounds_vertical_crs (see those attributes). EPSG:4326 coordinate values are latitude (decimal degrees_north) and longitude (decimal degrees_east), in that order. Longitude values in the default case are limited to the [-180, 180) range. Example: 'POLYGON ((40.26 -111.29, 41.26 -111.29, 41.26 -110.29, 40.26 -110.29, 40.26 -111.29))'.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#geospatial_bounds">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#geospatial_bounds</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="geospatial_bounds_crs">
+  <h3>geospatial_bounds_crs<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/geospatial_bounds_crs</p>
+  <div class="comment">
+   <span class="markdown">The coordinate reference system (CRS) of the point coordinates in the geospatial_bounds attribute. This CRS may be 2-dimensional or 3-dimensional, but together with geospatial_bounds_vertical_crs, if that attribute is supplied, must match the dimensionality, order, and meaning of point coordinate values in the geospatial_bounds attribute. If geospatial_bounds_vertical_crs is also present then this attribute must only specify a 2D CRS. EPSG CRSs are strongly recommended. If this attribute is not specified, the CRS is assumed to be EPSG:4326. Examples: 'EPSG:4979' (the 3D WGS84 CRS), 'EPSG:4047'.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#geospatial_bounds_crs">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#geospatial_bounds_crs</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="geospatial_bounds_vertical_crs">
+  <h3>geospatial_bounds_vertical_crs<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/geospatial_bounds_vertical_crs</p>
+  <div class="comment">
+   <span class="markdown">The vertical coordinate reference system (CRS) for the Z axis of the point coordinates in the geospatial_bounds attribute. This attribute cannot be used if the CRS in geospatial_bounds_crs is 3-dimensional; to use this attribute, geospatial_bounds_crs must exist and specify a 2D CRS. EPSG CRSs are strongly recommended. There is no default for this attribute when not specified. Examples: 'EPSG:5829' (instantaneous height above sea level), "EPSG:5831" (instantaneous depth below sea level), or 'EPSG:5703' (NAVD88 height).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#geospatial_bounds_vertical_crs">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#geospatial_bounds_vertical_crs</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="geospatial_lat_max">
+  <h3>geospatial_lat_max<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/geospatial_lat_max</p>
+  <div class="comment">
+   <span class="markdown">Describes a simple upper latitude limit; may be part of a 2- or 3-dimensional bounding region. Geospatial_lat_max specifies the northernmost latitude covered by the dataset.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#geospatial_lat_max">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#geospatial_lat_max</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#double" target="_blank" title="http://www.w3.org/2001/XMLSchema#double">double</a> <span class="logic">or</span> <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="geospatial_lat_min">
+  <h3>geospatial_lat_min<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/geospatial_lat_min</p>
+  <div class="comment">
+   <span class="markdown">Describes a simple lower latitude limit; may be part of a 2- or 3-dimensional bounding region. Geospatial_lat_min specifies the southernmost latitude covered by the dataset.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#geospatial_lat_min">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#geospatial_lat_min</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#double" target="_blank" title="http://www.w3.org/2001/XMLSchema#double">double</a> <span class="logic">or</span> <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="geospatial_lat_resolution">
+  <h3>geospatial_lat_resolution<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/geospatial_lat_resolution</p>
+  <div class="comment">
+   <span class="markdown">Information about the targeted spacing of points in latitude. Recommend describing resolution as a number value followed by the units. Examples: '100 meters', '0.1 degree'</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#geospatial_lat_resolution">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#geospatial_lat_resolution</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="geospatial_lat_units">
+  <h3>geospatial_lat_units<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/geospatial_lat_units</p>
+  <div class="comment">
+   <span class="markdown">Units for the latitude axis described in "geospatial_lat_min" and "geospatial_lat_max" attributes. These are presumed to be "degree_north"; other options from udunits may be specified instead.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#geospatial_lat_units">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#geospatial_lat_units</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="geospatial_lon_max">
+  <h3>geospatial_lon_max<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/geospatial_lon_max</p>
+  <div class="comment">
+   <span class="markdown">Describes a simple longitude limit; may be part of a 2- or 3-dimensional bounding region. geospatial_lon_max specifies the easternmost longitude covered by the dataset. Cases where geospatial_lon_min is greater than geospatial_lon_max indicate the bounding box extends from geospatial_lon_max, through the longitude range discontinuity meridian (either the antimeridian for -180:180 values, or Prime Meridian for 0:360 values), to geospatial_lon_min; for example, geospatial_lon_min=170 and geospatial_lon_max=-175 incorporates 15 degrees of longitude (ranges 170 to 180 and -180 to -175).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#geospatial_lon_max">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#geospatial_lon_max</a>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -272,12 +823,51 @@ This section provides details for each class and property defined by Attribute C
    </dl>
   </div>
  </div>
- <div class="entity" id="end_time">
-  <h3>End Time<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/end_time</p>
+ <div class="entity" id="geospatial_lon_min">
+  <h3>geospatial_lon_min<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/geospatial_lon_min</p>
   <div class="comment">
-   <span class="markdown">The end of the bounding time period.</span>
+   <span class="markdown">Describes a simple longitude limit; may be part of a 2- or 3-dimensional bounding region. geospatial_lon_min specifies the westernmost longitude covered by the dataset. See also geospatial_lon_max.</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#geospatial_lon_min">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#geospatial_lon_min</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#double" target="_blank" title="http://www.w3.org/2001/XMLSchema#double">double</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="geospatial_lon_resolution">
+  <h3>geospatial_lon_resolution<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/geospatial_lon_resolution</p>
+  <div class="comment">
+   <span class="markdown">Information about the targeted spacing of points in longitude. Recommend describing resolution as a number value followed by units. Examples: '100 meters', '0.1 degree'</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#geospatial_lon_resolution">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#geospatial_lon_resolution</a>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -295,12 +885,361 @@ This section provides details for each class and property defined by Attribute C
    </dl>
   </div>
  </div>
- <div class="entity" id="keyword">
+ <div class="entity" id="geospatial_lon_units">
+  <h3>geospatial_lon_units<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/geospatial_lon_units</p>
+  <div class="comment">
+   <span class="markdown">Units for the longitude axis described in "geospatial_lon_min" and "geospatial_lon_max" attributes. These are presumed to be "degree_east"; other options from udunits may be specified instead.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#geospatial_lon_units">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#geospatial_lon_units</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="geospatial_vertical_max">
+  <h3>geospatial_vertical_max<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/geospatial_vertical_max</p>
+  <div class="comment">
+   <span class="markdown">Describes the numerically larger vertical limit; may be part of a 2- or 3-dimensional bounding region. See geospatial_vertical_positive and geospatial_vertical_units.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#geospatial_vertical_max">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#geospatial_vertical_max</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#double" target="_blank" title="http://www.w3.org/2001/XMLSchema#double">double</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="geospatial_vertical_min">
+  <h3>geospatial_vertical_min<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/geospatial_vertical_min</p>
+  <div class="comment">
+   <span class="markdown">Describes the numerically smaller vertical limit; may be part of a 2- or 3-dimensional bounding region. See geospatial_vertical_positive and geospatial_vertical_units.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#geospatial_vertical_min">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#geospatial_vertical_min</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#double" target="_blank" title="http://www.w3.org/2001/XMLSchema#double">double</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="geospatial_vertical_positive">
+  <h3>geospatial_vertical_positive<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/geospatial_vertical_positive</p>
+  <div class="comment">
+   <span class="markdown">One of 'up' or 'down'. If up, vertical values are interpreted as 'altitude', with negative values corresponding to below the reference datum (e.g., under water). If down, vertical values are interpreted as 'depth', positive values correspond to below the reference datum. Note that if geospatial_vertical_positive is down ('depth' orientation), the geospatial_vertical_min attribute specifies the data's vertical location furthest from the earth's center, and the geospatial_vertical_max attribute specifies the location closest to the earth's center.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#geospatial_vertical_positive">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#geospatial_vertical_positive</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="geospatial_vertical_resolution">
+  <h3>geospatial_vertical_resolution<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/geospatial_vertical_resolution</p>
+  <div class="comment">
+   <span class="markdown">Information about the targeted vertical spacing of points. Example: '25 meters'</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#geospatial_vertical_resolution">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#geospatial_vertical_resolution</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="geospatial_vertical_units">
+  <h3>geospatial_vertical_units<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/geospatial_vertical_units</p>
+  <div class="comment">
+   <span class="markdown">Units for the vertical axis described in "geospatial_vertical_min" and "geospatial_vertical_max" attributes. The default is EPSG:4979 (height above the ellipsoid, in meters); other vertical coordinate reference systems may be specified. Note that the common oceanographic practice of using pressure for a vertical coordinate, while not strictly a depth, can be specified using the unit bar. Examples: 'EPSG:5829' (instantaneous height above sea level), 'EPSG:5831' (instantaneous depth below sea level).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#geospatial_vertical_units">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#geospatial_vertical_units</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="history">
+  <h3>history<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/history</p>
+  <div class="comment">
+   <span class="markdown">Provides an audit trail for modifications to the original data. This attribute is also in the NetCDF Users Guide: 'This is a character array with a line for each invocation of a program that has modified the dataset. Well-behaved generic netCDF applications should append a line containing: date, time of day, user name, program name and command arguments.' To include a more complete description you can append a reference to an ISO Lineage entity; see NOAA EDM ISO Lineage guidance.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#history">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#history</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="id">
+  <h3>id<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/id</p>
+  <div class="comment">
+   <span class="markdown">An identifier for the data set, provided by and unique within its naming authority. The combination of the "naming authority" and the "id" should be globally unique, but the id can be globally unique by itself also. IDs can be URLs, URNs, DOIs, meaningful text strings, a local key, or any other unique string of characters. The id should not include white space characters.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#id">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#id</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="institution">
+  <h3>institution<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/institution</p>
+  <div class="comment">
+   <span class="markdown">The name of the institution principally responsible for originating this data. This attribute is recommended by the CF convention.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#institution">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#institution</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="instrument">
+  <h3>instrument<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/instrument</p>
+  <div class="comment">
+   <span class="markdown">Name of the contributing instrument(s) or sensor(s) used to create this data set or product. Indicate controlled vocabulary used in instrument_vocabulary.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#instrument">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#instrument</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="instrument_vocabulary">
+  <h3>instrument_vocabulary<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/instrument_vocabulary</p>
+  <div class="comment">
+   <span class="markdown">Controlled vocabulary for the names used in the "instrument" attribute.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#instrument_vocabulary">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#instrument_vocabulary</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="keywords">
   <h3>Keyword<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/keyword</p>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/keywords</p>
   <div class="comment">
-   <span class="markdown">A word or phrase that describes some aspect of a resource. Can be one of several types.</span>
+   <span class="markdown">A comma-separated list of key words and/or phrases. Keywords may be common words or phrases, terms from a controlled vocabulary (GCMD is often used), or URIs for terms from a controlled vocabulary (see also "keywords_vocabulary" attribute).</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#keywords">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#keywords</a>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -318,12 +1257,20 @@ This section provides details for each class and property defined by Attribute C
    </dl>
   </div>
  </div>
- <div class="entity" id="keyword_vocabulary">
-  <h3>Keyword Vocabulary<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/keyword_vocabulary</p>
+ <div class="entity" id="keywords_vocabulary">
+  <h3>keywords_vocabulary<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/keywords_vocabulary</p>
   <div class="comment">
-   <span class="markdown">If you are following a guideline or using a shared vocabulary for the words/phrases in your keywords attribute, put the name of that guideline here.</span>
+   <span class="markdown">If you are using a controlled vocabulary for the words/phrases in your "keywords" attribute, this is the unique name or identifier of the vocabulary from which keywords are taken. If more than one keyword vocabulary is used, each may be presented with a prefix and a following comma, so that keywords may optionally be prefixed with the controlled vocabulary key. Example: 'GCMD:GCMD Keywords, CF:NetCDF COARDS Climate and Forecast Standard Names'.</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#keywords_vocabulary">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#keywords_vocabulary</a>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -341,12 +1288,20 @@ This section provides details for each class and property defined by Attribute C
    </dl>
   </div>
  </div>
- <div class="entity" id="lineage_statement">
-  <h3>Lineage Statement<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/lineage_statement</p>
+ <div class="entity" id="license">
+  <h3>license<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/license</p>
   <div class="comment">
-   <span class="markdown">Information and references for sources and processes that were used to create the dataset and an audit trail for modifications to the original data.</span>
+   <span class="markdown">Provide the URL to a standard or specific license, enter "Freely Distributed" or "None", or describe any restrictions to data access and distribution in free text.</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#license">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#license</a>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -360,16 +1315,70 @@ This section provides details for each class and property defined by Attribute C
     </dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="long_name">
+  <h3>long_name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/long_name</p>
+  <div class="comment">
+   <span class="markdown">A long descriptive name for the variable (not necessarily from a controlled vocabulary). This attribute is recommended by the NetCDF Users Guide, the COARDS convention, and the CF convention.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#long_name">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#long_name</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="metadata_link">
+  <h3>metadata_link<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/metadata_link</p>
+  <div class="comment">
+   <span class="markdown">A URL that gives the location of more complete metadata. A persistent URL is recommended for this attribute.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#metadata_link">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#metadata_link</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#anyURI" target="_blank" title="http://www.w3.org/2001/XMLSchema#anyURI">any U R I</a>
     </dd>
    </dl>
   </div>
  </div>
  <div class="entity" id="naming_authority">
-  <h3>Naming Authority<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <h3>naming_authority<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/naming_authority</p>
   <div class="comment">
-   <span class="markdown">The organization responsible for the maintenance of the identifier (namespace).</span>
+   <span class="markdown">The organization that provides the initial id (see above) for the dataset. The naming authority should be uniquely specified by this attribute. We recommend using reverse-DNS naming for the naming authority; URIs are also acceptable. Example: 'edu.ucar.unidata'.</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#naming_authority">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#naming_authority</a>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -387,12 +1396,20 @@ This section provides details for each class and property defined by Attribute C
    </dl>
   </div>
  </div>
- <div class="entity" id="northernmost_latitude">
-  <h3>Northernmost Latitude<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/northernmost_latitude</p>
+ <div class="entity" id="platform">
+  <h3>platform<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/platform</p>
   <div class="comment">
-   <span class="markdown">The northernmost latitude of the bounding rectangle.</span>
+   <span class="markdown">Name of the platform(s) that supported the sensor data used to create this data set or product. Platforms can be of any type, including satellite, ship, station, aircraft or other. Indicate controlled vocabulary used in platform_vocabulary.</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#platform">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#platform</a>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -405,17 +1422,25 @@ This section provides details for each class and property defined by Attribute C
      has range
     </dt>
     <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#double" target="_blank" title="http://www.w3.org/2001/XMLSchema#double">double</a>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="originating_organization">
-  <h3>Originating Organization<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/originating_organization</p>
+ <div class="entity" id="platform_vocabulary">
+  <h3>platform_vocabulary<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/platform_vocabulary</p>
   <div class="comment">
-   <span class="markdown">The organization responsible for creating the resource.</span>
+   <span class="markdown">Controlled vocabulary for the names used in the "platform" attribute.</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#platform_vocabulary">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#platform_vocabulary</a>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -437,8 +1462,16 @@ This section provides details for each class and property defined by Attribute C
   <h3>Processing Level<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/processing_level</p>
   <div class="comment">
-   <span class="markdown">A code that indicates the extent of processing done in the creation of a dataset.</span>
+   <span class="markdown">A textual description of the processing (or quality control) level of the data.</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#processing_level">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#processing_level</a>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -456,12 +1489,20 @@ This section provides details for each class and property defined by Attribute C
    </dl>
   </div>
  </div>
- <div class="entity" id="project_name">
-  <h3>Project Name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/project_name</p>
+ <div class="entity" id="product_version">
+  <h3>product_version<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/product_version</p>
   <div class="comment">
-   <span class="markdown">The name of the project that the resource was associated with.</span>
+   <span class="markdown"> Version identifier of the data file or product as assigned by the data creator. For example, a new algorithm or methodology could result in a new product_version.</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#product_version">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#product_version</a>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -479,12 +1520,51 @@ This section provides details for each class and property defined by Attribute C
    </dl>
   </div>
  </div>
- <div class="entity" id="publisher">
-  <h3>Publisher<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/publisher</p>
+ <div class="entity" id="program">
+  <h3>program<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/program</p>
   <div class="comment">
-   <span class="markdown">Publisher of the cited resource.</span>
+   <span class="markdown">The overarching program(s) of which the dataset is a part. A program consists of a set (or portfolio) of related and possibly interdependent projects that meet an overarching objective. Examples: 'GHRSST', 'NOAA CDR', 'NASA EOS', 'JPSS', 'GOES-R'.</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#program">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#program</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="project">
+  <h3>project<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/project</p>
+  <div class="comment">
+   <span class="markdown">The name of the project(s) principally responsible for originating this data. Multiple projects can be separated by commas, as described under Attribute Content Guidelines. Examples: 'PATMOS-X', 'Extended Continental Shelf Project'.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#project">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#project</a>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -503,11 +1583,112 @@ This section provides details for each class and property defined by Attribute C
   </div>
  </div>
  <div class="entity" id="publisher_email">
-  <h3>Publisher E-Mail<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <h3>publisher_email<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/publisher_email</p>
   <div class="comment">
-   <span class="markdown">Email associated with the publisher of the cited resource.</span>
+   <span class="markdown">The email address of the person (or other entity specified by the publisher_type attribute) responsible for publishing the data file or product to users, with its current metadata and format.</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#publisher_email">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#publisher_email</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="publisher_institution">
+  <h3>publisher_institution<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/publisher_institution</p>
+  <div class="comment">
+   <span class="markdown">The institution that presented the data file or equivalent product to users; should uniquely identify the institution. If publisher_type is institution, this should have the same value as publisher_name.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#publisher_institution">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#publisher_institution</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="publisher_name">
+  <h3>publisher_name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/publisher_name</p>
+  <div class="comment">
+   <span class="markdown">The name of the person (or other entity specified by the publisher_type attribute) responsible for publishing the data file or product to users, with its current metadata and format.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#publisher_name">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#publisher_name</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="publisher_type">
+  <h3>publisher_type<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/publisher_type</p>
+  <div class="comment">
+   <span class="markdown">Specifies type of publisher with one of the following: 'person', 'group', 'institution', or 'position'. If this attribute is not specified, the publisher is assumed to be a person.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#publisher_type">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#publisher_type</a>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -526,11 +1707,19 @@ This section provides details for each class and property defined by Attribute C
   </div>
  </div>
  <div class="entity" id="publisher_url">
-  <h3>Publisher URL<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <h3>publisher_url<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/publisher_url</p>
   <div class="comment">
-   <span class="markdown">World Wide Web address associated with the publisher of the cited resource.</span>
+   <span class="markdown">The URL of the person (or other entity specified by the publisher_type attribute) responsible for publishing the data file or product to users, with its current metadata and format.</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#publisher_url">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#publisher_url</a>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -548,12 +1737,51 @@ This section provides details for each class and property defined by Attribute C
    </dl>
   </div>
  </div>
- <div class="entity" id="resource_access_constraints">
-  <h3>Resource Access Constraints<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/resource_access_constraints</p>
+ <div class="entity" id="references">
+  <h3>references<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/references</p>
   <div class="comment">
-   <span class="markdown">Information about any constraints for accessing the data set. This includes any special restrictions, legal prerequisites, limitations and/or warnings on obtaining the data set.</span>
+   <span class="markdown">Published or web-based references that describe the data or methods used to produce it. Recommend URIs (such as a URL or DOI) for papers or other references. This attribute is defined in the CF conventions.</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#references">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#references</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#anyURI" target="_blank" title="http://www.w3.org/2001/XMLSchema#anyURI">any U R I</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="source">
+  <h3>source<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/source</p>
+  <div class="comment">
+   <span class="markdown">The method of production of the original data. If it was model-generated, source should name the model and its version. If it is observational, source should characterize it. This attribute is defined in the CF Conventions. Examples: 'temperature from CTD #1234'; 'world model v.0.1'.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#source">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#source</a>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -571,127 +1799,35 @@ This section provides details for each class and property defined by Attribute C
    </dl>
   </div>
  </div>
- <div class="entity" id="resource_contact">
-  <h3>Resource Contact<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/resource_contact</p>
+ <div class="entity" id="standard_name">
+  <h3>standard_name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/standard_name</p>
   <div class="comment">
-   <span class="markdown">The organization or person responsible for answering questions about the resource.</span>
+   <span class="markdown">A long descriptive name for the variable taken from a controlled vocabulary of variable names. We recommend using the CF convention and the variable names from the CF standard name table. This attribute is recommended by the CF convention.</span>
   </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="resource_creation-revision_date">
-  <h3>Resource Creation/Revision Date<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/resource_creation-revision_date</p>
-  <div class="comment">
-   <span class="markdown">The date the resource was created.</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="resource_identifier">
-  <h3>Resource Identifier<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/resource_identifier</p>
-  <div class="comment">
-   <span class="markdown">Identifier for the resource described by the metadata.</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="resource_title">
-  <h3>Resource Title<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/resource_title</p>
-  <div class="comment">
-   <span class="markdown">A short description of the resource. The title should be descriptive enough so that when a user is presented with a list of titles the general content of the data set can be determined.</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="southernmost_latitude">
-  <h3>Southernmost Latitude<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/southernmost_latitude</p>
-  <div class="comment">
-   <span class="markdown">The southernmost latitude of the bounding rectangle.</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#double" target="_blank" title="http://www.w3.org/2001/XMLSchema#double">double</a>
-    </dd>
-   </dl>
-  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#standard_name">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#standard_name</a>
+   </dd>
+  </dl>
  </div>
  <div class="entity" id="standard_name_vocabulary">
-  <h3>Standard Name Vocabulary<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <h3>standard_name_vocabulary<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/standard_name_vocabulary</p>
   <div class="comment">
-   <span class="markdown">The name of the shared vocabulary from which variable standard names are taken.</span>
+   <span class="markdown">The name and version of the controlled vocabulary from which variable standard names are taken. (Values for any standard_name attribute must come from the CF Standard Names vocabulary for the data file or product to comply with CF.) Example: 'CF Standard Name Table v27'.</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#standard_name_vocabulary">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#standard_name_vocabulary</a>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -709,12 +1845,20 @@ This section provides details for each class and property defined by Attribute C
    </dl>
   </div>
  </div>
- <div class="entity" id="start_time">
-  <h3>Start Time<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/start_time</p>
+ <div class="entity" id="summary">
+  <h3>Summary<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/summary</p>
   <div class="comment">
-   <span class="markdown">The start of the bounding time period.</span>
+   <span class="markdown">A paragraph describing the dataset, analogous to an abstract for a paper.</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#summary">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#summary</a>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -732,12 +1876,20 @@ This section provides details for each class and property defined by Attribute C
    </dl>
   </div>
  </div>
- <div class="entity" id="supplemental_information">
-  <h3>Supplemental Information<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/supplemental_information</p>
+ <div class="entity" id="time_coverage_duration">
+  <h3>time_coverage_duration<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/time_coverage_duration</p>
   <div class="comment">
-   <span class="markdown">Miscellaneous information about the data.</span>
+   <span class="markdown">Describes the duration of the data set. Use ISO 8601:2004 duration format, preferably the extended format as recommended in the Attribute Content Guidance section.</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#time_coverage_duration">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#time_coverage_duration</a>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -755,12 +1907,20 @@ This section provides details for each class and property defined by Attribute C
    </dl>
   </div>
  </div>
- <div class="entity" id="temporal_extent">
-  <h3>Temporal Extent<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/temporal_extent</p>
+ <div class="entity" id="time_coverage_end">
+  <h3>time_coverage_end<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/time_coverage_end</p>
   <div class="comment">
-   <span class="markdown">The temporal extent of the resource.</span>
+   <span class="markdown">Describes the time of the last data point in the data set. Use ISO 8601:2004 date format, preferably the extended format as recommended in the Attribute Content Guidance section.</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#time_coverage_end">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#time_coverage_end</a>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -778,12 +1938,20 @@ This section provides details for each class and property defined by Attribute C
    </dl>
   </div>
  </div>
- <div class="entity" id="temporal_resolution">
-  <h3>Temporal Resolution<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/temporal_resolution</p>
+ <div class="entity" id="time_coverage_resolution">
+  <h3>time_coverage_resolution<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/time_coverage_resolution</p>
   <div class="comment">
-   <span class="markdown">The smallest time step included in the resource.</span>
+   <span class="markdown">Describes the targeted time period between each value in the data set. Use ISO 8601:2004 duration format, preferably the extended format as recommended in the Attribute Content Guidance section.</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#time_coverage_resolution">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#time_coverage_resolution</a>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -801,12 +1969,20 @@ This section provides details for each class and property defined by Attribute C
    </dl>
   </div>
  </div>
- <div class="entity" id="vertical_maximum">
-  <h3>Vertical Maximum<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/vertical_maximum</p>
+ <div class="entity" id="time_coverage_start">
+  <h3>time_coverage_start<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/time_coverage_start</p>
   <div class="comment">
-   <span class="markdown">The maximum height or depth of the bounding rectangle.</span>
+   <span class="markdown">Describes the time of the first data point in the data set. Use the ISO 8601:2004 date format, preferably the extended format as recommended in the Attribute Content Guidance section.</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#time_coverage_start">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#time_coverage_start</a>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -819,17 +1995,25 @@ This section provides details for each class and property defined by Attribute C
      has range
     </dt>
     <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#double" target="_blank" title="http://www.w3.org/2001/XMLSchema#double">double</a>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="vertical_minimum">
-  <h3>Vertical Minimum<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/vertical_minimum</p>
+ <div class="entity" id="title">
+  <h3>title<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/title</p>
   <div class="comment">
-   <span class="markdown">The minimum height or depth of the bounding rectangle.</span>
+   <span class="markdown">A short phrase or sentence describing the dataset. In many discovery systems, the title will be displayed in the results list from a search, and therefore should be human readable and reasonable to display in a list of such names.</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#title">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#title</a>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -842,44 +2026,37 @@ This section provides details for each class and property defined by Attribute C
      has range
     </dt>
     <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#double" target="_blank" title="http://www.w3.org/2001/XMLSchema#double">double</a>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="westernmost_longitude">
-  <h3>Westernmost Longitude<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/westernmost_longitude</p>
+ <div class="entity" id="units">
+  <h3>units<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/units</p>
   <div class="comment">
-   <span class="markdown">The westernmost longitude of the bounding rectangle.</span>
+   <span class="markdown">The units of the variable's data values. This attribute value should be a valid udunits string. The "units" attribute is recommended by the NetCDF Users Guide, the COARDS convention, and the CF convention.</span>
   </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#double" target="_blank" title="http://www.w3.org/2001/XMLSchema#double">double</a>
-    </dd>
-   </dl>
-  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#units">https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#units</a>
+   </dd>
+  </dl>
  </div>
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
  <h3 id="namedindividuals" class="list">Named Individuals</h3>
  <ul class="hlist">
-  <li><a href="#HighlyRecommended" title="https://schema.acdd.dev/v1.3/HighlyRecommended">Highly Recommended</a></li>
-  <li><a href="#Recommended" title="https://schema.acdd.dev/v1.3/Recommended">Recommended</a></li>
-  <li><a href="#Suggested" title="https://schema.acdd.dev/v1.3/Suggested">Suggested</a></li>
+  <li><a href="#Dataset_HighlyRecommended" title="https://schema.acdd.dev/v1.3/Dataset_HighlyRecommended">Highly Recommended</a></li>
+  <li><a href="#Variable_HighlyRecommended" title="https://schema.acdd.dev/v1.3/Variable_HighlyRecommended">Highly Recommended Variable Attribute</a></li>
+  <li><a href="#Dataset_Recommended" title="https://schema.acdd.dev/v1.3/Dataset_Recommended">Recommended</a></li>
+  <li><a href="#Dataset_Suggested" title="https://schema.acdd.dev/v1.3/Dataset_Suggested">Suggested</a></li>
  </ul>
- <div class="entity" id="HighlyRecommended">
+ <div class="entity" id="Dataset_HighlyRecommended">
   <h3>Highly Recommended<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/HighlyRecommended</p>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/Dataset_HighlyRecommended</p>
   <div class="comment">
    <span class="markdown">Attributes that are highly recommended by the ACDD.</span>
   </div>
@@ -890,11 +2067,38 @@ This section provides details for each class and property defined by Attribute C
    <dd>
     <a href="#RecommendationLevel" title="https://schema.acdd.dev/v1.3/RecommendationLevel">Recommendation Level</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/subject" target="_blank" title="http://purl.org/dc/terms/subject">subject</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Dataset"</span>
+   </dd>
   </dl>
  </div>
- <div class="entity" id="Recommended">
+ <div class="entity" id="Variable_HighlyRecommended">
+  <h3>Highly Recommended Variable Attribute<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/Variable_HighlyRecommended</p>
+  <div class="comment">
+   <span class="markdown">Variable Attributes that are highly recommended by the ACDD.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#RecommendationLevel" title="https://schema.acdd.dev/v1.3/RecommendationLevel">Recommendation Level</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/subject" target="_blank" title="http://purl.org/dc/terms/subject">subject</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Variable"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Dataset_Recommended">
   <h3>Recommended<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/Recommended</p>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/Dataset_Recommended</p>
   <div class="comment">
    <span class="markdown">Attributes that are recommended by the ACDD.</span>
   </div>
@@ -905,11 +2109,17 @@ This section provides details for each class and property defined by Attribute C
    <dd>
     <a href="#RecommendationLevel" title="https://schema.acdd.dev/v1.3/RecommendationLevel">Recommendation Level</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/subject" target="_blank" title="http://purl.org/dc/terms/subject">subject</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Dataset"</span>
+   </dd>
   </dl>
  </div>
- <div class="entity" id="Suggested">
+ <div class="entity" id="Dataset_Suggested">
   <h3>Suggested<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/Suggested</p>
+  <p><strong>IRI:</strong> https://schema.acdd.dev/v1.3/Dataset_Suggested</p>
   <div class="comment">
    <span class="markdown">Attributes that are suggested by the ACDD.</span>
   </div>
@@ -919,6 +2129,12 @@ This section provides details for each class and property defined by Attribute C
    </dt>
    <dd>
     <a href="#RecommendationLevel" title="https://schema.acdd.dev/v1.3/RecommendationLevel">Recommendation Level</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/subject" target="_blank" title="http://purl.org/dc/terms/subject">subject</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Dataset"</span>
    </dd>
   </dl>
  </div>
