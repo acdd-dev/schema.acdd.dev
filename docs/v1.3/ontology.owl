@@ -219,7 +219,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <terms:source rdf:resource="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#keywords"/>
         <rdfs:comment xml:lang="en">A comma-separated list of the conventions that are followed by the dataset. For files that follow this version of ACDD, include the string &apos;ACDD-1.3&apos;. </rdfs:comment>
-        <rdfs:label xml:lang="en">Conventions</rdfs:label>
+        <rdfs:label xml:lang="en">conventions</rdfs:label>
         <recommendationLevel rdf:resource="https://schema.acdd.dev/v1.3/Dataset_HighlyRecommended"/>
     </owl:DatatypeProperty>
     
@@ -709,7 +709,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <terms:source rdf:resource="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#keywords"/>
         <rdfs:comment xml:lang="en">A comma-separated list of key words and/or phrases. Keywords may be common words or phrases, terms from a controlled vocabulary (GCMD is often used), or URIs for terms from a controlled vocabulary (see also &quot;keywords_vocabulary&quot; attribute).</rdfs:comment>
-        <rdfs:label xml:lang="en">Keyword</rdfs:label>
+        <rdfs:label xml:lang="en">keywords</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://schema.acdd.dev/v1.3/keywords_vocabulary"/>
         <recommendationLevel rdf:resource="https://schema.acdd.dev/v1.3/Dataset_HighlyRecommended"/>
     </owl:DatatypeProperty>
@@ -823,7 +823,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <terms:source rdf:resource="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#processing_level"/>
         <rdfs:comment xml:lang="en">A textual description of the processing (or quality control) level of the data.</rdfs:comment>
-        <rdfs:label xml:lang="en">Processing Level</rdfs:label>
+        <rdfs:label xml:lang="en">processing_level</rdfs:label>
         <recommendationLevel rdf:resource="https://schema.acdd.dev/v1.3/Dataset_Recommended"/>
     </owl:DatatypeProperty>
     
@@ -1003,7 +1003,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <terms:source rdf:resource="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#summary"/>
         <rdfs:comment xml:lang="en">A paragraph describing the dataset, analogous to an abstract for a paper.</rdfs:comment>
-        <rdfs:label xml:lang="en">Summary</rdfs:label>
+        <rdfs:label xml:lang="en">summary</rdfs:label>
         <recommendationLevel rdf:resource="https://schema.acdd.dev/v1.3/Dataset_HighlyRecommended"/>
     </owl:DatatypeProperty>
     

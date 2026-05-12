@@ -123,7 +123,7 @@
 <https://schema.acdd.dev/v1.3/conventions> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://schema.acdd.dev/v1.3/conventions> <http://purl.org/dc/terms/source> <https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#keywords> .
 <https://schema.acdd.dev/v1.3/conventions> <http://www.w3.org/2000/01/rdf-schema#comment> "A comma-separated list of the conventions that are followed by the dataset. For files that follow this version of ACDD, include the string 'ACDD-1.3'. "@en .
-<https://schema.acdd.dev/v1.3/conventions> <http://www.w3.org/2000/01/rdf-schema#label> "Conventions"@en .
+<https://schema.acdd.dev/v1.3/conventions> <http://www.w3.org/2000/01/rdf-schema#label> "conventions"@en .
 <https://schema.acdd.dev/v1.3/conventions> <https://schema.acdd.dev/v1.3/recommendationLevel> <https://schema.acdd.dev/v1.3/Dataset_HighlyRecommended> .
 # 
 # https://schema.acdd.dev/v1.3/coverage_content_type
@@ -459,7 +459,7 @@ _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://schema.acdd.dev/v1.3/keywords> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://schema.acdd.dev/v1.3/keywords> <http://purl.org/dc/terms/source> <https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#keywords> .
 <https://schema.acdd.dev/v1.3/keywords> <http://www.w3.org/2000/01/rdf-schema#comment> "A comma-separated list of key words and/or phrases. Keywords may be common words or phrases, terms from a controlled vocabulary (GCMD is often used), or URIs for terms from a controlled vocabulary (see also \"keywords_vocabulary\" attribute)."@en .
-<https://schema.acdd.dev/v1.3/keywords> <http://www.w3.org/2000/01/rdf-schema#label> "Keyword"@en .
+<https://schema.acdd.dev/v1.3/keywords> <http://www.w3.org/2000/01/rdf-schema#label> "keywords"@en .
 <https://schema.acdd.dev/v1.3/keywords> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.acdd.dev/v1.3/keywords_vocabulary> .
 <https://schema.acdd.dev/v1.3/keywords> <https://schema.acdd.dev/v1.3/recommendationLevel> <https://schema.acdd.dev/v1.3/Dataset_HighlyRecommended> .
 # 
@@ -533,7 +533,7 @@ _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://schema.acdd.dev/v1.3/processing_level> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://schema.acdd.dev/v1.3/processing_level> <http://purl.org/dc/terms/source> <https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#processing_level> .
 <https://schema.acdd.dev/v1.3/processing_level> <http://www.w3.org/2000/01/rdf-schema#comment> "A textual description of the processing (or quality control) level of the data."@en .
-<https://schema.acdd.dev/v1.3/processing_level> <http://www.w3.org/2000/01/rdf-schema#label> "Processing Level"@en .
+<https://schema.acdd.dev/v1.3/processing_level> <http://www.w3.org/2000/01/rdf-schema#label> "processing_level"@en .
 <https://schema.acdd.dev/v1.3/processing_level> <https://schema.acdd.dev/v1.3/recommendationLevel> <https://schema.acdd.dev/v1.3/Dataset_Recommended> .
 # 
 # https://schema.acdd.dev/v1.3/product_version
@@ -648,7 +648,7 @@ _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://schema.acdd.dev/v1.3/summary> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://schema.acdd.dev/v1.3/summary> <http://purl.org/dc/terms/source> <https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#summary> .
 <https://schema.acdd.dev/v1.3/summary> <http://www.w3.org/2000/01/rdf-schema#comment> "A paragraph describing the dataset, analogous to an abstract for a paper."@en .
-<https://schema.acdd.dev/v1.3/summary> <http://www.w3.org/2000/01/rdf-schema#label> "Summary"@en .
+<https://schema.acdd.dev/v1.3/summary> <http://www.w3.org/2000/01/rdf-schema#label> "summary"@en .
 <https://schema.acdd.dev/v1.3/summary> <https://schema.acdd.dev/v1.3/recommendationLevel> <https://schema.acdd.dev/v1.3/Dataset_HighlyRecommended> .
 # 
 # https://schema.acdd.dev/v1.3/time_coverage_duration

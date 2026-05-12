@@ -133,7 +133,7 @@ xsd:date rdf:type rdfs:Datatype .
              rdfs:range xsd:string ;
              <http://purl.org/dc/terms/source> <https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#keywords> ;
              rdfs:comment "A comma-separated list of the conventions that are followed by the dataset. For files that follow this version of ACDD, include the string 'ACDD-1.3'. "@en ;
-             rdfs:label "Conventions"@en ;
+             rdfs:label "conventions"@en ;
              :recommendationLevel :Dataset_HighlyRecommended .
 
 
@@ -477,7 +477,7 @@ xsd:date rdf:type rdfs:Datatype .
           rdfs:range xsd:string ;
           <http://purl.org/dc/terms/source> <https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#keywords> ;
           rdfs:comment "A comma-separated list of key words and/or phrases. Keywords may be common words or phrases, terms from a controlled vocabulary (GCMD is often used), or URIs for terms from a controlled vocabulary (see also \"keywords_vocabulary\" attribute)."@en ;
-          rdfs:label "Keyword"@en ;
+          rdfs:label "keywords"@en ;
           rdfs:seeAlso :keywords_vocabulary ;
           :recommendationLevel :Dataset_HighlyRecommended .
 
@@ -559,7 +559,7 @@ xsd:date rdf:type rdfs:Datatype .
                   rdfs:range xsd:string ;
                   <http://purl.org/dc/terms/source> <https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#processing_level> ;
                   rdfs:comment "A textual description of the processing (or quality control) level of the data."@en ;
-                  rdfs:label "Processing Level"@en ;
+                  rdfs:label "processing_level"@en ;
                   :recommendationLevel :Dataset_Recommended .
 
 
@@ -687,7 +687,7 @@ xsd:date rdf:type rdfs:Datatype .
          rdfs:range xsd:string ;
          <http://purl.org/dc/terms/source> <https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#summary> ;
          rdfs:comment "A paragraph describing the dataset, analogous to an abstract for a paper."@en ;
-         rdfs:label "Summary"@en ;
+         rdfs:label "summary"@en ;
          :recommendationLevel :Dataset_HighlyRecommended .
 
 
